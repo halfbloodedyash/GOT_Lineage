@@ -1,12 +1,14 @@
 'use client'
 
-import { useRef, useCallback } from 'react'
-import { useTree } from '@/lib/context/tree-context'
+import { useRef, useCallback, useEffect, useState } from 'react'
+import { useTreeData, useTreeView } from '@/lib/context/tree-context'
 
 export default function Minimap() {
-    const { state, setPan, setZoom } = useTree()
+    const { data, loading } = useTreeData()
+    const { view, setPan, setZoom } = useTreeView()
     const minimapRef = useRef<HTMLDivElement>(null)
-    const { zoom, panX, panY } = state.view
+    const { zoom, panX, panY } = view
+    const [viewportSize, setViewportSize] = useState({ width: 1000, height: 800 })
 
     // Constants for minimap dimensions
     const MINIMAP_WIDTH = 180
@@ -15,8 +17,18 @@ export default function Minimap() {
     const TREE_ESTIMATE_HEIGHT = 1500
 
     // Calculate viewport rectangle size
-    const viewportWidth = (MINIMAP_WIDTH / TREE_ESTIMATE_WIDTH) * (typeof window !== 'undefined' ? window.innerWidth : 1000) / zoom
-    const viewportHeight = (MINIMAP_HEIGHT / TREE_ESTIMATE_HEIGHT) * (typeof window !== 'undefined' ? window.innerHeight : 800) / zoom
+    useEffect(() => {
+        if (typeof window === 'undefined') return
+        const updateViewport = () => {
+            setViewportSize({ width: window.innerWidth, height: window.innerHeight })
+        }
+        updateViewport()
+        window.addEventListener('resize', updateViewport)
+        return () => window.removeEventListener('resize', updateViewport)
+    }, [])
+
+    const viewportWidth = (MINIMAP_WIDTH / TREE_ESTIMATE_WIDTH) * viewportSize.width / zoom
+    const viewportHeight = (MINIMAP_HEIGHT / TREE_ESTIMATE_HEIGHT) * viewportSize.height / zoom
 
     // Calculate viewport position
     const viewportX = -(panX / TREE_ESTIMATE_WIDTH) * MINIMAP_WIDTH + (MINIMAP_WIDTH - viewportWidth) / 2
@@ -41,10 +53,10 @@ export default function Minimap() {
         setPan(0, 0)
     }
 
-    if (state.loading || !state.data) return null
+    if (loading || !data) return null
 
     // Generate minimap dots for each house
-    const houseDots = state.data.houses.slice(0, 8).map((house, index) => {
+    const houseDots = data.houses.slice(0, 8).map((house, index) => {
         const angle = (index / 8) * Math.PI * 2
         const radius = 35
         const x = MINIMAP_WIDTH / 2 + Math.cos(angle) * radius

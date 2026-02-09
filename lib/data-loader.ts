@@ -1,54 +1,118 @@
 import { FamilyTreeData, Person, House } from '@/lib/types'
+import { HOUSE_COLORS } from '@/lib/constants/house-colors'
+import { parseFamilyTreeData } from '@/lib/validation/family-tree'
 
-// House colors mapping
-const HOUSE_COLORS: Record<string, string> = {
-    stark: '#5c7689',
-    lannister: '#c9a227',
-    targaryen: '#a31621',
-    baratheon: '#1a1a1a',
-    greyjoy: '#2d3436',
-    tyrell: '#27ae60',
-    martell: '#e67e22',
-    arryn: '#3498db',
-    tully: '#16a085',
-    bolton: '#8e44ad',
-    frey: '#7f8c8d',
-    mormont: '#2c3e50',
-    tarly: '#8b4513',
-    tarth: '#9b59b6',
-    hightower: '#4a5568',
-    velaryon: '#0ea5e9',
-    strong: '#78350f',
+interface DataIndexes {
+    personById: Map<string, Person>
+    houseById: Map<string, House>
+    parentsByChild: Map<string, string[]>
+    childrenByParent: Map<string, string[]>
+    spousesByPerson: Map<string, string[]>
+    partnersByPerson: Map<string, string[]>
+    hasParent: Set<string>
+}
+
+const dataIndexCache = new WeakMap<FamilyTreeData, DataIndexes>()
+
+function addUnique(map: Map<string, string[]>, key: string, value: string) {
+    const values = map.get(key)
+    if (!values) {
+        map.set(key, [value])
+        return
+    }
+    if (!values.includes(value)) {
+        values.push(value)
+    }
+}
+
+function buildDataIndexes(data: FamilyTreeData): DataIndexes {
+    const personById = new Map<string, Person>(data.persons.map(person => [person.id, person]))
+    const houseById = new Map<string, House>(data.houses.map(house => [house.id, house]))
+    const parentsByChild = new Map<string, string[]>()
+    const childrenByParent = new Map<string, string[]>()
+    const spousesByPerson = new Map<string, string[]>()
+    const partnersByPerson = new Map<string, string[]>()
+    const hasParent = new Set<string>()
+
+    data.relationships.forEach(rel => {
+        if (rel.type === 'parent-child') {
+            addUnique(parentsByChild, rel.child, rel.parent)
+            addUnique(childrenByParent, rel.parent, rel.child)
+            hasParent.add(rel.child)
+            return
+        }
+
+        addUnique(partnersByPerson, rel.person1, rel.person2)
+        addUnique(partnersByPerson, rel.person2, rel.person1)
+        if (rel.type === 'spouse') {
+            addUnique(spousesByPerson, rel.person1, rel.person2)
+            addUnique(spousesByPerson, rel.person2, rel.person1)
+        }
+    })
+
+    return {
+        personById,
+        houseById,
+        parentsByChild,
+        childrenByParent,
+        spousesByPerson,
+        partnersByPerson,
+        hasParent,
+    }
+}
+
+function getDataIndexes(data: FamilyTreeData): DataIndexes {
+    const cached = dataIndexCache.get(data)
+    if (cached) return cached
+
+    const indexes = buildDataIndexes(data)
+    dataIndexCache.set(data, indexes)
+    return indexes
 }
 
 /**
  * Load and validate the family tree data (client-side fetch)
  */
+export function normalizeFamilyTreeData(data: FamilyTreeData): FamilyTreeData {
+    return {
+        ...data,
+        houses: data.houses.map(house => ({
+            ...house,
+            color: HOUSE_COLORS[house.id as keyof typeof HOUSE_COLORS] || house.color,
+        })),
+        relationships: data.relationships.map((rel, index) => ({
+            ...rel,
+            id: rel.id || `rel_${index}`,
+        })),
+    }
+}
+
 export async function loadFamilyTreeData(): Promise<FamilyTreeData> {
     const response = await fetch('/data/complete_lineage.json')
-    const data = await response.json() as FamilyTreeData
+    if (!response.ok) {
+        throw new Error(`Failed to load family tree data (${response.status})`)
+    }
+    const raw = await response.json()
+    const data = parseFamilyTreeData(raw)
+    return normalizeFamilyTreeData(data)
+}
 
-    // Add IDs to relationships if missing
-    data.relationships = data.relationships.map((rel, index) => ({
-        ...rel,
-        id: rel.id || `rel_${index}`,
-    }))
-
-    return data
+export function getPersonIndex(data: FamilyTreeData): ReadonlyMap<string, Person> {
+    return getDataIndexes(data).personById
 }
 
 /**
  * Get a person by ID
  */
 export function getPersonById(data: FamilyTreeData, id: string): Person | undefined {
-    return data.persons.find(p => p.id === id)
+    return getDataIndexes(data).personById.get(id)
 }
 
 /**
  * Get a house by ID
  */
 export function getHouseById(data: FamilyTreeData, id: string): House | undefined {
-    return data.houses.find(h => h.id === id)
+    return getDataIndexes(data).houseById.get(id)
 }
 
 /**
@@ -57,31 +121,30 @@ export function getHouseById(data: FamilyTreeData, id: string): House | undefine
 export function getHouseColor(data: FamilyTreeData, houseId: string | null): string {
     if (!houseId) return '#6b7280'
     const house = getHouseById(data, houseId)
-    return house?.color || HOUSE_COLORS[houseId] || '#6b7280'
+    return HOUSE_COLORS[houseId as keyof typeof HOUSE_COLORS] || house?.color || '#6b7280'
 }
 
 /**
  * Get all relationships for a person
  */
 export function getPersonRelationships(data: FamilyTreeData, personId: string) {
-    return data.relationships.filter(rel =>
-        rel.parent === personId ||
-        rel.child === personId ||
-        rel.person1 === personId ||
-        rel.person2 === personId
-    )
+    return data.relationships.filter(rel => {
+        if (rel.type === 'parent-child') {
+            return rel.parent === personId || rel.child === personId
+        }
+        return rel.person1 === personId || rel.person2 === personId
+    })
 }
 
 /**
  * Get parents of a person
  */
 export function getParents(data: FamilyTreeData, personId: string) {
-    const parentRelations = data.relationships.filter(
-        rel => rel.type === 'parent-child' && rel.child === personId
-    )
+    const { parentsByChild, personById } = getDataIndexes(data)
+    const parentIds = parentsByChild.get(personId) || []
 
-    return parentRelations
-        .map(rel => getPersonById(data, rel.parent!))
+    return parentIds
+        .map(id => personById.get(id))
         .filter(Boolean) as Person[]
 }
 
@@ -89,12 +152,11 @@ export function getParents(data: FamilyTreeData, personId: string) {
  * Get children of a person
  */
 export function getChildren(data: FamilyTreeData, personId: string) {
-    const childRelations = data.relationships.filter(
-        rel => rel.type === 'parent-child' && rel.parent === personId
-    )
+    const { childrenByParent, personById } = getDataIndexes(data)
+    const childIds = childrenByParent.get(personId) || []
 
-    return childRelations
-        .map(rel => getPersonById(data, rel.child!))
+    return childIds
+        .map(id => personById.get(id))
         .filter(Boolean) as Person[]
 }
 
@@ -102,15 +164,11 @@ export function getChildren(data: FamilyTreeData, personId: string) {
  * Get spouses of a person
  */
 export function getSpouses(data: FamilyTreeData, personId: string) {
-    const spouseRelations = data.relationships.filter(
-        rel => rel.type === 'spouse' && (rel.person1 === personId || rel.person2 === personId)
-    )
+    const { spousesByPerson, personById } = getDataIndexes(data)
+    const spouseIds = spousesByPerson.get(personId) || []
 
-    return spouseRelations
-        .map(rel => {
-            const spouseId = rel.person1 === personId ? rel.person2 : rel.person1
-            return getPersonById(data, spouseId!)
-        })
+    return spouseIds
+        .map(id => personById.get(id))
         .filter(Boolean) as Person[]
 }
 
@@ -147,20 +205,10 @@ export function searchPersons(data: FamilyTreeData, query: string) {
  * Returns map of house ID to root persons (those without parents in the dataset)
  */
 export function buildHouseHierarchies(data: FamilyTreeData) {
-    const personChildren = new Map<string, string[]>()
-    const hasParent = new Set<string>()
-
-    // Build parent -> children map
-    data.relationships.forEach(rel => {
-        if (rel.type === 'parent-child' && rel.parent && rel.child) {
-            const children = personChildren.get(rel.parent) || []
-            if (!children.includes(rel.child)) {
-                children.push(rel.child)
-                personChildren.set(rel.parent, children)
-            }
-            hasParent.add(rel.child)
-        }
-    })
+    const { childrenByParent, hasParent } = getDataIndexes(data)
+    const personChildren = new Map<string, string[]>(
+        Array.from(childrenByParent.entries()).map(([id, children]) => [id, [...children]])
+    )
 
     // Find root persons (no parents in dataset)
     const roots = data.persons.filter(p => !hasParent.has(p.id))
@@ -172,20 +220,8 @@ export function buildHouseHierarchies(data: FamilyTreeData) {
  * Get spouse relationships as a map
  */
 export function getSpouseMap(data: FamilyTreeData): Map<string, string[]> {
-    const spouseMap = new Map<string, string[]>()
-
-    data.relationships.forEach(rel => {
-        if ((rel.type === 'spouse' || rel.type === 'betrothed') && rel.person1 && rel.person2) {
-            const spouses1 = spouseMap.get(rel.person1) || []
-            const spouses2 = spouseMap.get(rel.person2) || []
-
-            if (!spouses1.includes(rel.person2)) spouses1.push(rel.person2)
-            if (!spouses2.includes(rel.person1)) spouses2.push(rel.person1)
-
-            spouseMap.set(rel.person1, spouses1)
-            spouseMap.set(rel.person2, spouses2)
-        }
-    })
-
-    return spouseMap
+    const { partnersByPerson } = getDataIndexes(data)
+    return new Map(
+        Array.from(partnersByPerson.entries()).map(([id, partners]) => [id, [...partners]])
+    )
 }

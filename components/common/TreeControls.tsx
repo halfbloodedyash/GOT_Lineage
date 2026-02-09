@@ -1,16 +1,16 @@
 'use client'
 
-import { useTree } from '@/lib/context/tree-context'
+import { useTreeView } from '@/lib/context/tree-context'
 
 export default function TreeControls() {
-    const { state, setZoom, toggleOrientation, resetView } = useTree()
-    const { zoom, orientation } = state.view
+    const { view, setZoom, toggleOrientation, resetView } = useTreeView()
+    const { zoom, orientation } = view
 
     const handleZoomIn = () => setZoom(zoom + 0.25)
     const handleZoomOut = () => setZoom(zoom - 0.25)
     const handleFitToScreen = () => setZoom(1)
 
-    const buttonClass = "w-9 h-9 flex items-center justify-center rounded-sm border border-border bg-bg-secondary text-text-secondary hover:bg-surface-hover hover:text-text-primary hover:border-border-light disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-150"
+    const buttonClass = "w-9 h-9 flex items-center justify-center rounded-sm border border-border bg-bg-secondary text-text-secondary hover:bg-surface-hover hover:text-text-primary hover:border-border-light disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-150 focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-secondary"
     const activeButtonClass = "bg-accent-glow border-accent-primary text-accent-primary"
 
     return (

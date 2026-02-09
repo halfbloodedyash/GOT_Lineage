@@ -1,27 +1,23 @@
-'use client'
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import TreeApp from '@/components/TreeApp'
+import { normalizeFamilyTreeData } from '@/lib/data-loader'
+import { parseFamilyTreeData } from '@/lib/validation/family-tree'
+import type { FamilyTreeData } from '@/lib/types'
 
-import Header from '@/components/layout/Header'
-import FamilyTree from '@/components/visualization/FamilyTree'
-import CharacterDetail from '@/components/panels/CharacterDetail'
-import Legend from '@/components/common/Legend'
-import TreeControls from '@/components/common/TreeControls'
-import Minimap from '@/components/common/Minimap'
-import FilterPanel from '@/components/filters/FilterPanel'
+async function getInitialData(): Promise<FamilyTreeData | null> {
+    try {
+        const filePath = path.join(process.cwd(), 'public', 'data', 'complete_lineage.json')
+        const raw = await fs.readFile(filePath, 'utf8')
+        const parsed = parseFamilyTreeData(JSON.parse(raw))
+        return normalizeFamilyTreeData(parsed)
+    } catch (error) {
+        console.error('Failed to load initial data on server:', error)
+        return null
+    }
+}
 
-export default function Home() {
-    return (
-        <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-1 flex overflow-hidden">
-                <div className="flex-1 relative overflow-hidden">
-                    <FamilyTree />
-                    <FilterPanel />
-                    <TreeControls />
-                    <Minimap />
-                    <Legend />
-                </div>
-                <CharacterDetail />
-            </main>
-        </div>
-    )
+export default async function Home() {
+    const data = await getInitialData()
+    return <TreeApp initialData={data} />
 }

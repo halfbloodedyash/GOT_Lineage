@@ -1,13 +1,20 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
-import { useTree } from '@/lib/context/tree-context'
+import { useState, useRef, useEffect, useId } from 'react'
+import { useTreeData, useTreeSearch, useTreeView } from '@/lib/context/tree-context'
+import { useClickOutside } from '@/lib/hooks/use-click-outside'
+import { getStatusColor } from '@/lib/utils/status'
+import { getHouseColor as getHouseColorById } from '@/lib/data-loader'
 
 export default function SearchBar() {
-    const { state, search, selectCharacter } = useTree()
+    const { data } = useTreeData()
+    const { searchQuery, searchResults, search } = useTreeSearch()
+    const { selectCharacter } = useTreeView()
     const [isOpen, setIsOpen] = useState(false)
+    const [activeIndex, setActiveIndex] = useState(0)
     const inputRef = useRef<HTMLInputElement>(null)
     const containerRef = useRef<HTMLDivElement>(null)
+    const listboxId = useId()
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         search(e.target.value)
@@ -21,27 +28,39 @@ export default function SearchBar() {
     }
 
     const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === 'ArrowDown' && searchResults.length > 0) {
+            e.preventDefault()
+            setIsOpen(true)
+            setActiveIndex((prev) => Math.min(prev + 1, searchResults.length - 1))
+            return
+        }
+        if (e.key === 'ArrowUp' && searchResults.length > 0) {
+            e.preventDefault()
+            setIsOpen(true)
+            setActiveIndex((prev) => Math.max(prev - 1, 0))
+            return
+        }
+        if ((e.key === 'Enter' || e.key === ' ') && isOpen && searchResults[activeIndex]) {
+            e.preventDefault()
+            handleSelect(searchResults[activeIndex].id)
+            return
+        }
         if (e.key === 'Escape') {
             setIsOpen(false)
             inputRef.current?.blur()
         }
     }
 
-    // Close dropdown when clicking outside
-    useEffect(() => {
-        const handleClickOutside = (e: MouseEvent) => {
-            if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
-                setIsOpen(false)
-            }
-        }
+    useClickOutside(containerRef, () => setIsOpen(false), isOpen)
 
-        document.addEventListener('mousedown', handleClickOutside)
-        return () => document.removeEventListener('mousedown', handleClickOutside)
-    }, [])
+    useEffect(() => {
+        if (!isOpen) return
+        setActiveIndex((prev) => Math.min(prev, Math.max(0, searchResults.length - 1)))
+    }, [isOpen, searchResults.length])
 
     const getHouseColor = (houseId: string) => {
-        const house = state.data?.houses.find(h => h.id === houseId)
-        return house?.color || '#6b7280'
+        if (!data) return '#6b7280'
+        return getHouseColorById(data, houseId)
     }
 
     return (
@@ -61,20 +80,32 @@ export default function SearchBar() {
                 <input
                     ref={inputRef}
                     type="text"
-                    className="w-64 pl-10 pr-8 py-2 text-sm bg-black/30 border border-border rounded-sm text-text-primary placeholder:text-text-muted placeholder:italic focus:outline-none focus:border-accent-primary focus:bg-black/50 transition-all duration-300"
+                    className="w-64 pl-10 pr-8 py-2 text-sm bg-black/30 border border-border rounded-sm text-text-primary placeholder:text-text-muted placeholder:italic focus:outline-none focus:border-accent-primary focus:bg-black/50 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-secondary"
                     placeholder="Search characters..."
-                    value={state.searchQuery}
+                    value={searchQuery}
                     onChange={handleInputChange}
-                    onFocus={() => state.searchQuery && setIsOpen(true)}
+                    onFocus={() => searchQuery && setIsOpen(true)}
                     onKeyDown={handleKeyDown}
+                    role="combobox"
+                    aria-expanded={isOpen}
+                    aria-controls={listboxId}
+                    aria-autocomplete="list"
+                    aria-haspopup="listbox"
+                    aria-label="Search characters"
+                    aria-activedescendant={
+                        isOpen && searchResults[activeIndex]
+                            ? `search-option-${searchResults[activeIndex].id}`
+                            : undefined
+                    }
                 />
-                {state.searchQuery && (
+                {searchQuery && (
                     <button
-                        className="absolute right-2 w-5 h-5 flex items-center justify-center text-xs text-text-muted bg-border/50 rounded-full hover:bg-border hover:text-text-primary transition-all duration-150"
+                        className="absolute right-2 w-5 h-5 flex items-center justify-center text-xs text-text-muted bg-border/50 rounded-full hover:bg-border hover:text-text-primary transition-all duration-150 focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-secondary"
                         onClick={() => {
                             search('')
                             setIsOpen(false)
                         }}
+                        aria-label="Clear search"
                     >
                         ✕
                     </button>
@@ -82,13 +113,21 @@ export default function SearchBar() {
             </div>
 
             {/* Search Results Dropdown */}
-            {isOpen && state.searchResults.length > 0 && (
-                <div className="absolute top-full left-0 right-0 mt-1 bg-bg-secondary border border-border rounded-sm shadow-lg z-dropdown max-h-80 overflow-y-auto animate-fade-in">
-                    {state.searchResults.map(person => (
+            {isOpen && searchResults.length > 0 && (
+                <div
+                    id={listboxId}
+                    role="listbox"
+                    className="absolute top-full left-0 right-0 mt-1 bg-bg-secondary border border-border rounded-sm shadow-lg z-dropdown max-h-80 overflow-y-auto animate-fade-in"
+                >
+                    {searchResults.map((person, index) => (
                         <div
                             key={person.id}
-                            className="flex items-center gap-3 px-3 py-2 cursor-pointer hover:bg-surface-hover transition-colors duration-150"
+                            id={`search-option-${person.id}`}
+                            role="option"
+                            aria-selected={index === activeIndex}
+                            className={`flex items-center gap-3 px-3 py-2 cursor-pointer transition-colors duration-150 ${index === activeIndex ? 'bg-surface-hover' : 'hover:bg-surface-hover'}`}
                             onClick={() => handleSelect(person.id)}
+                            onMouseEnter={() => setActiveIndex(index)}
                         >
                             <div
                                 className="w-2 h-2 rounded-full flex-shrink-0"
@@ -105,14 +144,8 @@ export default function SearchBar() {
                                 )}
                             </div>
                             <span
-                                className={`w-2 h-2 rounded-full flex-shrink-0 ${person.status === 'alive'
-                                        ? 'bg-status-alive'
-                                        : person.status === 'deceased'
-                                            ? 'bg-status-deceased'
-                                            : person.status === 'imprisoned'
-                                                ? 'bg-status-imprisoned'
-                                                : 'bg-status-unknown'
-                                    }`}
+                                className="w-2 h-2 rounded-full flex-shrink-0"
+                                style={{ backgroundColor: getStatusColor(person.status) }}
                             />
                         </div>
                     ))}
@@ -120,7 +153,7 @@ export default function SearchBar() {
             )}
 
             {/* No Results */}
-            {isOpen && state.searchQuery && state.searchResults.length === 0 && (
+            {isOpen && searchQuery && searchResults.length === 0 && (
                 <div className="absolute top-full left-0 right-0 mt-1 bg-bg-secondary border border-border rounded-sm shadow-lg z-dropdown">
                     <div className="px-4 py-3 text-sm text-text-muted text-center">
                         No characters found

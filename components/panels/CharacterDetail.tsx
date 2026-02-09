@@ -1,12 +1,14 @@
 'use client'
 
 import { useMemo } from 'react'
-import { useTree } from '@/lib/context/tree-context'
+import { useTreeData, useTreeView } from '@/lib/context/tree-context'
 import { getPersonById, getHouseById, getParents, getChildren, getSpouses } from '@/lib/data-loader'
+import { getStatusBadgeStyle, getStatusLabel } from '@/lib/utils/status'
 
 export default function CharacterDetail() {
-    const { state, selectCharacter } = useTree()
-    const { data, view } = state
+    const { data } = useTreeData()
+    const { view, selectCharacter } = useTreeView()
+    const isOpen = Boolean(view.selectedCharacter)
 
     const character = useMemo(() => {
         if (!data || !view.selectedCharacter) return null
@@ -46,8 +48,18 @@ export default function CharacterDetail() {
     // Empty State
     if (!character) {
         return (
-            <aside className="side-panel hidden lg:flex flex-col items-center justify-center p-8 text-center">
-                <span className="text-5xl mb-4">👤</span>
+            <aside className={`side-panel ${isOpen ? 'open' : ''} flex flex-col items-center justify-center p-8 text-center`}>
+                <svg
+                    className="w-12 h-12 text-text-muted mb-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    aria-hidden="true"
+                >
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 20c2-4 6-6 8-6s6 2 8 6" />
+                </svg>
                 <h3 className="text-lg font-display uppercase text-accent-primary mb-2">Select a Character</h3>
                 <p className="text-sm text-text-muted">
                     Click on any character in the family tree to view their details.
@@ -56,24 +68,16 @@ export default function CharacterDetail() {
         )
     }
 
-    const getStatusBadge = (status: string) => {
-        const config = {
-            alive: { icon: '🟢', label: 'Alive', class: 'bg-status-alive/20 text-status-alive' },
-            deceased: { icon: '⚫', label: 'Deceased', class: 'bg-status-deceased/20 text-status-deceased' },
-            imprisoned: { icon: '🟠', label: 'Imprisoned', class: 'bg-status-imprisoned/20 text-status-imprisoned' },
-            unknown: { icon: '🔵', label: 'Unknown', class: 'bg-status-unknown/20 text-status-unknown' },
-        }
-        return config[status as keyof typeof config] || config.unknown
-    }
-
-    const statusBadge = getStatusBadge(character.status)
+    const statusBadgeStyle = getStatusBadgeStyle(character.status)
+    const statusLabel = getStatusLabel(character.status)
 
     return (
-        <aside className="side-panel hidden lg:block animate-fade-in">
+        <aside className={`side-panel ${isOpen ? 'open' : ''} animate-fade-in`}>
             {/* Close Button */}
             <button
-                className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-text-muted hover:text-text-primary hover:bg-surface-hover rounded-sm transition-colors z-10"
+                className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-text-muted hover:text-text-primary hover:bg-surface-hover rounded-sm transition-colors z-10 focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-secondary"
                 onClick={handleClose}
+                aria-label="Close character details"
             >
                 ✕
             </button>
@@ -94,7 +98,14 @@ export default function CharacterDetail() {
                     {character.titles?.some(t =>
                         t.toLowerCase().includes('king') || t.toLowerCase().includes('queen')
                     ) && (
-                            <span className="absolute -top-2 -right-2 text-2xl">👑</span>
+                            <svg
+                                className="absolute -top-2 -right-2 w-6 h-6 text-accent-primary"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                            >
+                                <path d="M3 7l4 3 5-6 5 6 4-3-2 13H5L3 7z" />
+                            </svg>
                         )}
                 </div>
 
@@ -110,8 +121,9 @@ export default function CharacterDetail() {
                 </span>
 
                 {/* Status Badge */}
-                <span className={`mt-3 px-3 py-1 text-xs rounded-full ${statusBadge.class}`}>
-                    {statusBadge.icon} {statusBadge.label}
+                <span className="mt-3 px-3 py-1 text-xs rounded-full inline-flex items-center gap-2" style={statusBadgeStyle}>
+                    <span className="w-2 h-2 rounded-full bg-current" aria-hidden="true" />
+                    {statusLabel}
                 </span>
             </header>
 
@@ -120,7 +132,18 @@ export default function CharacterDetail() {
                 {/* Bastard Badge */}
                 {character.bastard && (
                     <div className="flex items-center gap-2 px-3 py-2 bg-accent-secondary/10 border border-accent-secondary/30 rounded-sm text-sm text-text-secondary">
-                        <span>⚔️</span>
+                        <svg
+                            className="w-4 h-4 text-accent-secondary"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            aria-hidden="true"
+                        >
+                            <path d="M3 3l7 7-2 2-7-7 2-2z" />
+                            <path d="M14 14l7 7-2 2-7-7 2-2z" />
+                            <path d="M5 7l4-4M15 17l4-4" />
+                        </svg>
                         {character.legitimized ? 'Legitimized Bastard' : 'Bastard Born'}
                     </div>
                 )}
@@ -142,7 +165,21 @@ export default function CharacterDetail() {
                 {/* Death */}
                 {character.status === 'deceased' && character.deathCause && (
                     <section className="p-3 bg-status-deceased/10 border border-status-deceased/30 rounded-sm">
-                        <h4 className="text-sm font-display uppercase text-status-deceased mb-1 border-none p-0">⚰️ Death</h4>
+                        <h4 className="text-sm font-display uppercase text-status-deceased mb-1 border-none p-0 flex items-center gap-2">
+                            <svg
+                                className="w-4 h-4"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                aria-hidden="true"
+                            >
+                                <rect x="3" y="8" width="18" height="10" rx="2" />
+                                <path d="M8 8V6h8v2" />
+                                <path d="M7 13h10" />
+                            </svg>
+                            Death
+                        </h4>
                         <p className="text-sm text-text-secondary">{character.deathCause}</p>
                     </section>
                 )}
@@ -215,7 +252,22 @@ export default function CharacterDetail() {
                 {house && (
                     <section className="p-3 bg-surface border border-border rounded-sm">
                         <h4 className="text-sm font-display uppercase mb-2 border-none p-0" style={{ color: house.color }}>
-                            🏰 {house.name}
+                            <span className="inline-flex items-center gap-2">
+                                <svg
+                                    className="w-4 h-4"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="1.5"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M3 20h18" />
+                                    <path d="M5 20V9l4-3 3 3 3-3 4 3v11" />
+                                    <path d="M9 20v-5h6v5" />
+                                    <path d="M9 7V4h6v3" />
+                                </svg>
+                                {house.name}
+                            </span>
                         </h4>
                         {house.words && (
                             <p className="text-sm italic text-text-secondary mb-2">"{house.words}"</p>

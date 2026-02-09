@@ -27,45 +27,26 @@ export interface Person {
     legitimized?: boolean;
 }
 
-export interface Relationship {
-    id?: string;
-    parent?: string;
-    child?: string;
-    person1?: string;
-    person2?: string;
-    type: 'parent-child' | 'spouse' | 'betrothed';
-    secret?: boolean;
-}
+export type Relationship =
+    | {
+        id?: string;
+        type: 'parent-child';
+        parent: string;
+        child: string;
+        secret?: boolean;
+    }
+    | {
+        id?: string;
+        type: 'spouse' | 'betrothed';
+        person1: string;
+        person2: string;
+        secret?: boolean;
+    }
 
 export interface FamilyTreeData {
     houses: House[];
     persons: Person[];
     relationships: Relationship[];
-}
-
-// Hierarchical tree node for D3 hierarchy
-export interface HierarchyPerson {
-    id: string;
-    person: Person;
-    children?: HierarchyPerson[];
-    spouse?: Person;
-}
-
-// Graph types for D3 visualization
-export interface TreeNode {
-    id: string;
-    person: Person;
-    x?: number;
-    y?: number;
-    fx?: number | null;
-    fy?: number | null;
-}
-
-export interface TreeEdge {
-    id: string;
-    source: string | TreeNode;
-    target: string | TreeNode;
-    relationship: Relationship;
 }
 
 // UI State types

@@ -1,5 +1,8 @@
 'use client'
 
+import { PERSON_STATUSES } from '@/lib/constants/status-colors'
+import { getStatusColor, getStatusLabel } from '@/lib/utils/status'
+
 export default function Legend() {
     return (
         <div className="absolute bottom-4 left-4 z-dropdown bg-bg-secondary/95 backdrop-blur-sm border border-border rounded-sm shadow-lg p-3 text-xs">
@@ -38,22 +41,12 @@ export default function Legend() {
                     Status
                 </span>
                 <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-status-alive" />
-                        <span className="text-text-secondary">Alive</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-status-deceased" />
-                        <span className="text-text-secondary">Deceased</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-status-imprisoned" />
-                        <span className="text-text-secondary">Imprisoned</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-status-unknown" />
-                        <span className="text-text-secondary">Unknown</span>
-                    </div>
+                    {PERSON_STATUSES.map(status => (
+                        <div key={status} className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: getStatusColor(status) }} />
+                            <span className="text-text-secondary">{getStatusLabel(status)}</span>
+                        </div>
+                    ))}
                 </div>
             </div>
 

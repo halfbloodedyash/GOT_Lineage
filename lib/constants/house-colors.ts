@@ -1,0 +1,26 @@
+export const HOUSE_COLORS = {
+    stark: '#7e8791',
+    lannister: '#8a1c1c',
+    targaryen: '#1a1a1a',
+    baratheon: '#d4aa00',
+    greyjoy: '#2d3748',
+    martell: '#d35400',
+    tyrell: '#27ae60',
+    arryn: '#2980b9',
+    tully: '#c0392b',
+    bolton: '#592e39',
+    frey: '#7f8c8d',
+    tarly: '#1e4d2b',
+    mormont: '#2c3e50',
+    clegane: '#d3d3d3',
+    hightower: '#4a5568',
+    velaryon: '#0ea5e9',
+    strong: '#78350f',
+    cole: '#374151',
+    beesbury: '#fbbf24',
+    celtigar: '#dc2626',
+    dondarrion: '#7c3aed',
+    tarth: '#9b59b6',
+} as const
+
+export type HouseColorId = keyof typeof HOUSE_COLORS

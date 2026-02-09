@@ -1,9 +1,10 @@
 'use client'
 
-import { useMemo, useRef, useState, useCallback } from 'react'
-import { useTree } from '@/lib/context/tree-context'
-import { getHouseColor, getSpouseMap, getPersonById } from '@/lib/data-loader'
+import { memo, useMemo, useRef, useState, useCallback, useEffect } from 'react'
+import { useTreeData, useTreeFilters, useTreeView } from '@/lib/context/tree-context'
+import { getHouseColor, getSpouseMap, getPersonIndex } from '@/lib/data-loader'
 import type { Person } from '@/lib/types'
+import PersonCard from '@/components/visualization/PersonCard'
 
 interface TreeNodeData {
     id: string
@@ -12,27 +13,126 @@ interface TreeNodeData {
     _spouse?: Person
 }
 
+interface TreeNodeItemProps {
+    node: TreeNodeData
+    selectedCharacter: string | null
+    highlightedIds: Set<string>
+    getNodeColor: (person: Person) => string
+    onSelect: (id: string) => void
+}
+
+const TreeNodeItem = memo(function TreeNodeItem({
+    node,
+    selectedCharacter,
+    highlightedIds,
+    getNodeColor,
+    onSelect,
+}: TreeNodeItemProps) {
+    const children = node.children || []
+    const hasChildren = children.length > 0
+    const spouse = node._spouse
+    const hasSpouse = Boolean(spouse)
+    const isSelected = node.person.id === selectedCharacter
+    const isHighlighted = highlightedIds.has(node.person.id)
+
+    return (
+        <li className="flex flex-col items-center relative pt-5">
+            {/* Connector line from parent */}
+            <div className="absolute top-0 left-1/2 w-px h-5 bg-line-blood -translate-x-1/2" />
+
+            <div className="flex flex-col items-center">
+                {/* Couple container */}
+                {hasSpouse && spouse ? (
+                    <div className="flex items-center gap-0">
+                        <PersonCard
+                            person={node.person}
+                            houseColor={getNodeColor(node.person)}
+                            isSelected={isSelected}
+                            isHighlighted={isHighlighted}
+                            hasChildren={hasChildren}
+                            onSelect={onSelect}
+                        />
+                        <div className="w-8 h-0.5 bg-line-marriage" />
+                        <PersonCard
+                            person={spouse}
+                            houseColor={getNodeColor(spouse)}
+                            isSelected={spouse.id === selectedCharacter}
+                            isHighlighted={highlightedIds.has(spouse.id)}
+                            onSelect={onSelect}
+                        />
+                    </div>
+                ) : (
+                    <PersonCard
+                        person={node.person}
+                        houseColor={getNodeColor(node.person)}
+                        isSelected={isSelected}
+                        isHighlighted={isHighlighted}
+                        hasChildren={hasChildren}
+                        onSelect={onSelect}
+                    />
+                )}
+            </div>
+
+            {/* Children */}
+            {hasChildren && (
+                <ul
+                    className="flex gap-4 mt-0 relative pt-5 before:content-[''] before:absolute before:top-0 before:left-1/2 before:w-px before:h-5 before:bg-line-blood before:-translate-x-1/2"
+                    role="group"
+                >
+                    {/* Horizontal connector line */}
+                    {children.length > 1 && (
+                        <div
+                            className="absolute top-5 h-px bg-line-blood"
+                            style={{
+                                left: '25%',
+                                right: '25%',
+                            }}
+                        />
+                    )}
+                    {children.map(child => (
+                        <TreeNodeItem
+                            key={child.id}
+                            node={child}
+                            selectedCharacter={selectedCharacter}
+                            highlightedIds={highlightedIds}
+                            getNodeColor={getNodeColor}
+                            onSelect={onSelect}
+                        />
+                    ))}
+                </ul>
+            )}
+        </li>
+    )
+})
+
 export default function FamilyTree() {
-    const { state, selectCharacter, setZoom, setPan } = useTree()
+    const { data, loading, error } = useTreeData()
+    const { filters } = useTreeFilters()
+    const { view, selectCharacter, setZoom, setPan } = useTreeView()
     const containerRef = useRef<HTMLDivElement>(null)
     const [isDragging, setIsDragging] = useState(false)
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
 
-    const { zoom, panX, panY, orientation } = state.view
+    const { zoom, panX, panY, orientation, highlightedPath, selectedCharacter } = view
+    const highlightedIds = useMemo(() => new Set(highlightedPath), [highlightedPath])
+    const personIndex = useMemo(() => (data ? getPersonIndex(data) : new Map<string, Person>()), [data])
 
     // Build hierarchical tree data
     const treeData = useMemo(() => {
-        if (!state.data) return null
+        if (!data) return null
 
-        const { persons, relationships } = state.data
-        const selectedHouses = state.filters.selectedHouses
+        const { persons, relationships } = data
+        const selectedHouses = filters.selectedHouses
+        const relationshipsForView = filters.showSecrets
+            ? relationships
+            : relationships.filter(rel => !rel.secret)
 
         // Build parent -> children map
         const childrenMap = new Map<string, string[]>()
         const hasParent = new Set<string>()
 
-        relationships.forEach(rel => {
-            if (rel.type === 'parent-child' && rel.parent && rel.child) {
+        relationshipsForView.forEach(rel => {
+            if (rel.type === 'parent-child') {
                 const children = childrenMap.get(rel.parent) || []
                 if (!children.includes(rel.child)) {
                     children.push(rel.child)
@@ -43,7 +143,7 @@ export default function FamilyTree() {
         })
 
         // Get spouse map
-        const spouseMap = getSpouseMap(state.data)
+        const spouseMap = getSpouseMap({ ...data, relationships: relationshipsForView })
 
         // Filter persons by house
         if (selectedHouses.length === 0) {
@@ -54,10 +154,10 @@ export default function FamilyTree() {
         )
 
         // Filter by visibility
-        if (!state.filters.showDeceased) {
+        if (!filters.showDeceased) {
             filteredPersons = filteredPersons.filter(p => p.status !== 'deceased')
         }
-        if (!state.filters.showBastards) {
+        if (!filters.showBastards) {
             filteredPersons = filteredPersons.filter(p => !p.bastard)
         }
 
@@ -65,8 +165,8 @@ export default function FamilyTree() {
 
         // Build child -> parents map (to check if parents are in filtered set)
         const parentsMap = new Map<string, string[]>()
-        relationships.forEach(rel => {
-            if (rel.type === 'parent-child' && rel.parent && rel.child) {
+        relationshipsForView.forEach(rel => {
+            if (rel.type === 'parent-child') {
                 const parents = parentsMap.get(rel.child) || []
                 if (!parents.includes(rel.parent)) {
                     parents.push(rel.parent)
@@ -83,19 +183,27 @@ export default function FamilyTree() {
             return parentIds.length === 0 || !parentIds.some(pid => personIds.has(pid))
         })
 
+        const visiting = new Set<string>()
+        const rendered = new Set<string>()
+
         // Build tree recursively
         const buildNode = (person: Person): TreeNodeData | null => {
             if (!personIds.has(person.id)) return null
+            if (visiting.has(person.id)) return null
+            if (rendered.has(person.id)) return null
+            visiting.add(person.id)
 
             const childIds = childrenMap.get(person.id) || []
             const children = childIds
-                .map(id => getPersonById(state.data!, id))
+                .map(id => personIndex.get(id))
                 .filter((p): p is Person => p !== undefined && personIds.has(p.id))
                 .map(p => buildNode(p))
                 .filter((n): n is TreeNodeData => n !== null)
 
             const spouseIds = spouseMap.get(person.id) || []
-            const spouse = spouseIds.length > 0 ? getPersonById(state.data!, spouseIds[0]) : undefined
+            const spouse = spouseIds.length > 0 ? personIndex.get(spouseIds[0]) : undefined
+            visiting.delete(person.id)
+            rendered.add(person.id)
 
             return {
                 id: person.id,
@@ -110,137 +218,30 @@ export default function FamilyTree() {
             .filter((n): n is TreeNodeData => n !== null)
 
         return trees
-    }, [state.data, state.filters])
+    }, [data, filters, personIndex])
 
     // Get node color
-    const getNodeColor = (person: Person) => {
-        if (!state.data) return '#6b7280'
+    const getNodeColor = useCallback((person: Person) => {
+        if (!data) return '#6b7280'
         if (person.status === 'deceased') return 'rgba(107, 114, 128, 0.6)'
-        return getHouseColor(state.data, person.trueHouse || person.house)
-    }
-
-    // Render a person card
-    const renderPersonCard = (node: TreeNodeData) => {
-        const { person } = node
-        const isSelected = person.id === state.view.selectedCharacter
-        const houseColor = getNodeColor(person)
-
-        return (
-            <div
-                className={`relative flex flex-col items-center p-2 bg-surface border border-border rounded-sm cursor-pointer transition-all duration-200 hover:border-border-light hover:shadow-md min-w-[80px] ${isSelected ? 'ring-2 ring-accent-primary shadow-glow' : ''
-                    } ${person.status === 'deceased' ? 'opacity-60' : ''} ${person.bastard ? 'border-dashed' : ''
-                    }`}
-                onClick={(e) => {
-                    e.stopPropagation()
-                    selectCharacter(person.id)
-                }}
-            >
-                {/* Avatar */}
-                <div className="relative">
-                    <div
-                        className="w-10 h-10 rounded-full flex items-center justify-center text-base font-display text-white shadow-md"
-                        style={{ backgroundColor: houseColor }}
-                    >
-                        {person.name.charAt(0)}
-                    </div>
-                    <span
-                        className={`absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border border-surface ${person.status === 'alive'
-                            ? 'bg-status-alive'
-                            : person.status === 'deceased'
-                                ? 'bg-status-deceased'
-                                : person.status === 'imprisoned'
-                                    ? 'bg-status-imprisoned'
-                                    : 'bg-status-unknown'
-                            }`}
-                    />
-                </div>
-                {/* Name */}
-                <div className="mt-1.5 text-center">
-                    <span className="block text-xs font-medium text-text-primary truncate max-w-[70px]">
-                        {person.name.split(' ')[0]}
-                    </span>
-                    {person.name.split(' ').length > 1 && (
-                        <span className="block text-[10px] text-text-muted truncate max-w-[70px]">
-                            {person.name.split(' ').slice(1).join(' ')}
-                        </span>
-                    )}
-                </div>
-            </div>
-        )
-    }
-
-    // Render a tree node with its children
-    const renderTreeNode = (node: TreeNodeData) => {
-        const hasChildren = node.children && node.children.length > 0
-        const hasSpouse = node._spouse
-
-        return (
-            <li key={node.id} className="flex flex-col items-center relative pt-5">
-                {/* Connector line from parent */}
-                <div className="absolute top-0 left-1/2 w-px h-5 bg-line-blood -translate-x-1/2" />
-
-                <div className="flex flex-col items-center">
-                    {/* Couple container */}
-                    {hasSpouse ? (
-                        <div className="flex items-center gap-0">
-                            {renderPersonCard(node)}
-                            <div className="w-8 h-0.5 bg-line-marriage" />
-                            <div
-                                className={`relative flex flex-col items-center p-2 bg-surface border border-border rounded-sm cursor-pointer transition-all duration-200 hover:border-border-light hover:shadow-md min-w-[80px] ${node._spouse!.status === 'deceased' ? 'opacity-60' : ''
-                                    }`}
-                                onClick={(e) => {
-                                    e.stopPropagation()
-                                    selectCharacter(node._spouse!.id)
-                                }}
-                            >
-                                <div
-                                    className="w-10 h-10 rounded-full flex items-center justify-center text-base font-display text-white shadow-md"
-                                    style={{ backgroundColor: getNodeColor(node._spouse!) }}
-                                >
-                                    {node._spouse!.name.charAt(0)}
-                                </div>
-                                <div className="mt-1.5 text-center">
-                                    <span className="block text-xs font-medium text-text-primary truncate max-w-[70px]">
-                                        {node._spouse!.name.split(' ')[0]}
-                                    </span>
-                                    {node._spouse!.name.split(' ').length > 1 && (
-                                        <span className="block text-[10px] text-text-muted truncate max-w-[70px]">
-                                            {node._spouse!.name.split(' ').slice(1).join(' ')}
-                                        </span>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    ) : (
-                        renderPersonCard(node)
-                    )}
-                </div>
-
-                {/* Children */}
-                {hasChildren && (
-                    <ul className="flex gap-4 mt-0 relative pt-5 before:content-[''] before:absolute before:top-0 before:left-1/2 before:w-px before:h-5 before:bg-line-blood before:-translate-x-1/2">
-                        {/* Horizontal connector line */}
-                        {node.children!.length > 1 && (
-                            <div
-                                className="absolute top-5 h-px bg-line-blood"
-                                style={{
-                                    left: '25%',
-                                    right: '25%',
-                                }}
-                            />
-                        )}
-                        {node.children!.map(child => renderTreeNode(child))}
-                    </ul>
-                )}
-            </li>
-        )
-    }
+        return getHouseColor(data, person.trueHouse || person.house)
+    }, [data])
 
     // Mouse wheel zoom
-    const handleWheel = useCallback((e: React.WheelEvent) => {
-        e.preventDefault()
-        const delta = e.deltaY > 0 ? -0.1 : 0.1
-        setZoom(zoom + delta)
+    useEffect(() => {
+        const container = containerRef.current
+        if (!container) return
+
+        const handleWheel = (e: WheelEvent) => {
+            e.preventDefault()
+            const delta = e.deltaY > 0 ? -0.1 : 0.1
+            setZoom(zoom + delta)
+        }
+
+        container.addEventListener('wheel', handleWheel, { passive: false })
+        return () => {
+            container.removeEventListener('wheel', handleWheel)
+        }
     }, [zoom, setZoom])
 
     // Drag to pan
@@ -265,14 +266,13 @@ export default function FamilyTree() {
             className={`absolute inset-0 overflow-hidden bg-transparent select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'
                 }`}
             onClick={() => selectCharacter(null)}
-            onWheel={handleWheel}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
         >
             {/* Loading State */}
-            {state.loading && (
+            {loading && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
                     <div className="w-12 h-12 border-4 border-border border-t-accent-primary rounded-full animate-spin" />
                     <span className="text-text-muted">Loading family tree...</span>
@@ -280,16 +280,42 @@ export default function FamilyTree() {
             )}
 
             {/* Error State */}
-            {state.error && (
+            {error && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-accent-secondary">⚠️ {state.error}</span>
+                    <span className="text-accent-secondary flex items-center gap-2">
+                        <svg
+                            className="w-4 h-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            aria-hidden="true"
+                        >
+                            <path d="M12 9v4" />
+                            <path d="M12 17h.01" />
+                            <path d="M10.3 3.3h3.4l8.3 14.4a2 2 0 01-1.7 3H3.7a2 2 0 01-1.7-3l8.3-14.4a2 2 0 011.7-.9z" />
+                        </svg>
+                        {error}
+                    </span>
                 </div>
             )}
 
             {/* Empty State */}
-            {!state.loading && !state.error && !treeData && (
+            {!loading && !error && !treeData && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-center">
-                    <span className="text-6xl">🏰</span>
+                    <svg
+                        className="w-16 h-16 text-accent-primary"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        aria-hidden="true"
+                    >
+                        <path d="M3 20h18" />
+                        <path d="M5 20V9l4-3 3 3 3-3 4 3v11" />
+                        <path d="M9 20v-5h6v5" />
+                        <path d="M9 7V4h6v3" />
+                    </svg>
                     <h3 className="text-xl text-accent-primary font-display uppercase">Select a House</h3>
                     <p className="text-text-muted max-w-xs">
                         Choose a house from the dropdown above to explore its family tree.
@@ -306,8 +332,21 @@ export default function FamilyTree() {
                         transformOrigin: 'center top',
                     }}
                 >
-                    <ul className={`flex gap-8 ${orientation === 'horizontal' ? 'flex-col' : ''}`}>
-                        {treeData.map(tree => renderTreeNode(tree))}
+                    <ul
+                        className={`flex gap-8 ${orientation === 'horizontal' ? 'flex-col' : ''}`}
+                        role="tree"
+                        aria-label="Family tree"
+                    >
+                        {treeData.map(tree => (
+                            <TreeNodeItem
+                                key={tree.id}
+                                node={tree}
+                                selectedCharacter={selectedCharacter}
+                                highlightedIds={highlightedIds}
+                                getNodeColor={getNodeColor}
+                                onSelect={selectCharacter}
+                            />
+                        ))}
                     </ul>
                 </div>
             )}
