@@ -1,0 +1,4815 @@
+{
+    "houses": [
+        {
+            "id": "targaryen",
+            "name": "House Targaryen",
+            "seat": "Dragonstone",
+            "region": "The Crownlands",
+            "words": "Fire and Blood",
+            "sigil": "A three-headed red dragon on a black field",
+            "color": "#a31621"
+        },
+        {
+            "id": "stark",
+            "name": "House Stark",
+            "seat": "Winterfell",
+            "region": "The North",
+            "words": "Winter is Coming",
+            "sigil": "A grey direwolf on a white field",
+            "color": "#5c7689"
+        },
+        {
+            "id": "velaryon",
+            "name": "House Velaryon",
+            "seat": "Driftmark",
+            "region": "The Crownlands",
+            "words": "The Old, the True, the Brave",
+            "sigil": "A silver seahorse on sea green",
+            "color": "#20B2AA"
+        },
+        {
+            "id": "hightower",
+            "name": "House Hightower",
+            "seat": "Oldtown",
+            "region": "The Reach",
+            "words": "We Light the Way",
+            "sigil": "A white tower crowned with flames",
+            "color": "#C0C0C0"
+        },
+        {
+            "id": "baratheon",
+            "name": "House Baratheon",
+            "seat": "Storm's End",
+            "region": "The Stormlands",
+            "words": "Ours is the Fury",
+            "sigil": "A crowned black stag on a gold field",
+            "color": "#d4aa00"
+        },
+        {
+            "id": "arryn",
+            "name": "House Arryn",
+            "seat": "The Eyrie",
+            "region": "The Vale",
+            "words": "As High as Honor",
+            "sigil": "A white moon-and-falcon on a blue field",
+            "color": "#2980b9"
+        },
+        {
+            "id": "tully",
+            "name": "House Tully",
+            "seat": "Riverrun",
+            "region": "The Riverlands",
+            "words": "Family, Duty, Honor",
+            "sigil": "A leaping silver trout",
+            "color": "#c0392b"
+        },
+        {
+            "id": "martell",
+            "name": "House Martell",
+            "seat": "Sunspear",
+            "region": "Dorne",
+            "words": "Unbowed, Unbent, Unbroken",
+            "sigil": "A red sun pierced by a gold spear",
+            "color": "#d35400"
+        },
+        {
+            "id": "blackwood",
+            "name": "House Blackwood",
+            "seat": "Raventree Hall",
+            "region": "The Riverlands",
+            "words": null,
+            "sigil": "A dead weirwood tree",
+            "color": "#2c3e50"
+        },
+        {
+            "id": "tyrell",
+            "name": "House Tyrell",
+            "seat": "Highgarden",
+            "region": "The Reach",
+            "words": "Growing Strong",
+            "sigil": "A golden rose on a green field",
+            "color": "#2ecc71"
+        },
+        {
+            "id": "lannister",
+            "name": "House Lannister",
+            "seat": "Casterly Rock",
+            "region": "The Westerlands",
+            "words": "Hear Me Roar",
+            "sigil": "A golden lion on a crimson field",
+            "color": "#c9a227"
+        },
+        {
+            "id": "greyjoy",
+            "name": "House Greyjoy",
+            "seat": "Pyke",
+            "region": "Iron Islands",
+            "words": "We Do Not Sow",
+            "sigil": "A golden kraken on a black field",
+            "color": "#1a1a1a"
+        },
+        {
+            "id": "mormont",
+            "name": "House Mormont",
+            "seat": "Bear Island",
+            "region": "The North",
+            "words": "Here We Stand",
+            "sigil": "A black bear in a green wood",
+            "color": "#006400"
+        },
+        {
+            "id": "reed",
+            "name": "House Reed",
+            "seat": "Greywater Watch",
+            "region": "The Neck",
+            "words": null,
+            "sigil": "A black lion-lizard on grey-green",
+            "color": "#556b2f"
+        },
+        {
+            "id": "karstark",
+            "name": "House Karstark",
+            "seat": "Karhold",
+            "region": "The North",
+            "words": "The Sun of Winter",
+            "sigil": "A white sunburst on a black field",
+            "color": "#ffffff"
+        },
+        {
+            "id": "umber",
+            "name": "House Umber",
+            "seat": "Last Hearth",
+            "region": "The North",
+            "words": null,
+            "sigil": "A roaring giant on a flame-red field",
+            "color": "#8b0000"
+        },
+        {
+            "id": "tallhart",
+            "name": "House Tallhart",
+            "seat": "Torrhen's Square",
+            "region": "The North",
+            "words": "Proud and Free",
+            "sigil": "Three sentinel trees on a brown field",
+            "color": "#8b4513"
+        },
+        {
+            "id": "cerwyn",
+            "name": "House Cerwyn",
+            "seat": "Castle Cerwyn",
+            "region": "The North",
+            "words": null,
+            "sigil": "A black battle-axe on silver",
+            "color": "#c0c0c0"
+        },
+        {
+            "id": "glover",
+            "name": "House Glover",
+            "seat": "Deepwood Motte",
+            "region": "The North",
+            "words": null,
+            "sigil": "A silver mailed fist on scarlet",
+            "color": "#9f1915"
+        },
+        {
+            "id": "locke",
+            "name": "House Locke",
+            "seat": "Oldcastle",
+            "region": "The North",
+            "words": null,
+            "sigil": "Bronze crossed keys on violet",
+            "color": "#4b0082"
+        },
+        {
+            "id": "dustin",
+            "name": "House Dustin",
+            "seat": "Barrowlands",
+            "region": "The North",
+            "words": null,
+            "sigil": "Two crossed longaxes on black",
+            "color": "#000000"
+        },
+        {
+            "id": "royce",
+            "name": "House Royce",
+            "seat": "Runestone",
+            "region": "The Vale",
+            "words": "We Remember",
+            "sigil": "Black iron studs on bronze",
+            "color": "#cd7f32"
+        },
+        {
+            "id": "manderly",
+            "name": "House Manderly",
+            "seat": "White Harbor",
+            "region": "The North",
+            "words": "We Do Not Know",
+            "sigil": "A white merman with dark green hair on blue-green",
+            "color": "#2f4f4f"
+        },
+        {
+            "id": "bolton",
+            "name": "House Bolton",
+            "seat": "The Dreadfort",
+            "region": "The North",
+            "words": "Our Blades Are Sharp",
+            "sigil": "A flayed man on pink",
+            "color": "#eec9d2"
+        },
+        {
+            "id": "mallister",
+            "name": "House Mallister",
+            "seat": "Seagard",
+            "region": "The Riverlands",
+            "words": "Above the Rest",
+            "sigil": "A silver eagle on purple",
+            "color": "#800080"
+        },
+        {
+            "id": "piper",
+            "name": "House Piper",
+            "seat": "Pinkmaiden Castle",
+            "region": "The Riverlands",
+            "words": null,
+            "sigil": "A dancing maiden in pink silk on blue",
+            "color": "#ffb6c1"
+        },
+        {
+            "id": "bracken",
+            "name": "House Bracken",
+            "seat": "Stone Hedge",
+            "region": "The Riverlands",
+            "words": null,
+            "sigil": "A red stallion on brown",
+            "color": "#8b4513"
+        },
+        {
+            "id": "estermont",
+            "name": "House Estermont",
+            "seat": "Greenstone",
+            "region": "The Stormlands",
+            "words": null,
+            "sigil": "A green turtle with a golden shell",
+            "color": "#228b22"
+        },
+        {
+            "id": "swann",
+            "name": "House Swann",
+            "seat": "Stonehelm",
+            "region": "The Stormlands",
+            "words": null,
+            "sigil": "Black and white swans combatant",
+            "color": "#f0f0f0"
+        },
+        {
+            "id": "caron",
+            "name": "House Caron",
+            "seat": "Nightsong",
+            "region": "The Stormlands",
+            "words": null,
+            "sigil": "Yellow nightingales on black",
+            "color": "#000000"
+        },
+        {
+            "id": "tarth",
+            "name": "House Tarth",
+            "seat": "Evenfall Hall",
+            "region": "The Stormlands",
+            "words": null,
+            "sigil": "A yellow sun and white crescent on blue",
+            "color": "#4169e1"
+        },
+        {
+            "id": "dayne",
+            "name": "House Dayne",
+            "seat": "Starfall",
+            "region": "Dorne",
+            "words": null,
+            "sigil": "A white sword and falling star on purple",
+            "color": "#9370db"
+        },
+        {
+            "id": "westerling",
+            "name": "House Westerling",
+            "seat": "The Crag",
+            "region": "The Westerlands",
+            "words": null,
+            "sigil": "Six white shells on sand",
+            "color": "#f5deb3"
+        },
+        {
+            "id": "fowler",
+            "name": "House Fowler",
+            "seat": "Skyreach",
+            "region": "Dorne",
+            "words": "Let Me Soar",
+            "sigil": "A blue hooded hawk on silver",
+            "color": "#c0c0c0"
+        },
+        {
+            "id": "oakheart",
+            "name": "House Oakheart",
+            "seat": "Old Oak",
+            "region": "The Reach",
+            "words": null,
+            "sigil": "A green oak tree on gold",
+            "color": "#ffd700"
+        },
+        {
+            "id": "florent",
+            "name": "House Florent",
+            "seat": "Brightwater Keep",
+            "region": "The Reach",
+            "words": null,
+            "sigil": "A red fox in flowers on white",
+            "color": "#ffffff"
+        },
+        {
+            "id": "yronwood",
+            "name": "House Yronwood",
+            "seat": "Yronwood",
+            "region": "Dorne",
+            "words": "We Guard the Way",
+            "sigil": "A black portcullis over sand",
+            "color": "#d2b48c"
+        },
+        {
+            "id": "hightower",
+            "name": "House Hightower",
+            "seat": "Oldtown",
+            "region": "The Reach",
+            "words": "We Light the Way",
+            "sigil": "A white tower crowned with fire on grey",
+            "color": "#808080"
+        },
+        {
+            "id": "velaryon",
+            "name": "House Velaryon",
+            "seat": "Driftmark",
+            "region": "The Crownlands",
+            "words": null,
+            "sigil": "A silver seahorse on sea green",
+            "color": "#2e8b57"
+        },
+        {
+            "id": "strong",
+            "name": "House Strong",
+            "seat": "Harrenhal",
+            "region": "The Riverlands",
+            "words": null,
+            "sigil": "A blue and red tripart pale on white",
+            "color": "#007bff"
+        },
+        {
+            "id": "cole",
+            "name": "House Cole",
+            "seat": "Blackhaven",
+            "region": "Dornish Marches",
+            "words": null,
+            "sigil": "A black cauldron on gold",
+            "color": "#ffd700"
+        },
+        {
+            "id": "beesbury",
+            "name": "House Beesbury",
+            "seat": "Honeyholt",
+            "region": "The Reach",
+            "words": "Beware Our Sting",
+            "sigil": "Three yellow bees on black",
+            "color": "#ffa500"
+        },
+        {
+            "id": "celtigar",
+            "name": "House Celtigar",
+            "seat": "Claw Isle",
+            "region": "The Crownlands",
+            "words": null,
+            "sigil": "Red crabs strewn on white",
+            "color": "#dc143c"
+        },
+        {
+            "id": "dondarrion",
+            "name": "House Dondarrion",
+            "seat": "Blackhaven",
+            "region": "The Stormlands",
+            "words": null,
+            "sigil": "A forked purple lightning bolt on black",
+            "color": "#9932cc"
+        },
+        {
+            "id": "mooton",
+            "name": "House Mooton",
+            "seat": "Maidenpool",
+            "region": "The Riverlands",
+            "words": null,
+            "sigil": "A red salmon on white",
+            "color": "#fa8072"
+        },
+        {
+            "id": "fossoway",
+            "name": "House Fossoway",
+            "seat": "Cider Hall",
+            "region": "The Reach",
+            "words": "A Taste of Glory",
+            "sigil": "A green apple on gold",
+            "color": "#32cd32"
+        },
+        {
+            "id": "ashford",
+            "name": "House Ashford",
+            "seat": "Ashford",
+            "region": "The Reach",
+            "words": "Our Sun Shines Bright",
+            "sigil": "White sun on orange",
+            "color": "#ff8c00"
+        }
+    ],
+    "persons": [
+        {
+            "id": "aerion_targaryen",
+            "name": "Aerion Targaryen",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Lord of Dragonstone"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "valaena_velaryon",
+            "name": "Valaena Velaryon",
+            "house": "velaryon",
+            "marriedInto": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Lady"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "aegon_i",
+            "name": "Aegon I Targaryen",
+            "alias": "Aegon the Conqueror",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Andals, the Rhoynar, and the First Men",
+                "Lord of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "27 BC–37 AC"
+        },
+        {
+            "id": "visenya_targaryen",
+            "name": "Visenya Targaryen",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased",
+            "birthDeath": "29 BC–44 AC"
+        },
+        {
+            "id": "rhaenys_targaryen_og",
+            "name": "Rhaenys Targaryen",
+            "alias": "Rhaenys (Aegon's Sister-Wife)",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased",
+            "birthDeath": "25 BC–10 AC"
+        },
+        {
+            "id": "aenys_i",
+            "name": "Aenys I Targaryen",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "7 AC–42 AC"
+        },
+        {
+            "id": "maegor_i",
+            "name": "Maegor I Targaryen",
+            "alias": "Maegor the Cruel",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "12 AC–48 AC"
+        },
+        {
+            "id": "alyssa_velaryon",
+            "name": "Alyssa Velaryon",
+            "house": "velaryon",
+            "marriedInto": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "jaehaerys_i",
+            "name": "Jaehaerys I Targaryen",
+            "alias": "The Conciliator",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "34 AC–103 AC",
+            "series": "hod"
+        },
+        {
+            "id": "alysanne_targaryen",
+            "name": "Alysanne Targaryen",
+            "alias": "Good Queen Alysanne",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased",
+            "birthDeath": "36 AC–100 AC",
+            "series": "hod"
+        },
+        {
+            "id": "aemon_targaryen_hod",
+            "name": "Aemon Targaryen",
+            "alias": "Prince Aemon",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince",
+                "Heir Apparent"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "baelon_targaryen",
+            "name": "Baelon Targaryen",
+            "alias": "Baelon the Brave",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "alyssa_targaryen",
+            "name": "Alyssa Targaryen",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "jocelyn_baratheon",
+            "name": "Jocelyn Baratheon",
+            "house": "baratheon",
+            "marriedInto": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Lady"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "rhaenys_targaryen_hod",
+            "name": "Rhaenys Targaryen",
+            "alias": "The Queen Who Never Was",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "deceased",
+            "birthDeath": "74 AC–129 AC",
+            "series": "hod"
+        },
+        {
+            "id": "viserys_i",
+            "name": "Viserys I Targaryen",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "77 AC–129 AC",
+            "series": "hod"
+        },
+        {
+            "id": "daemon_targaryen",
+            "name": "Daemon Targaryen",
+            "alias": "The Rogue Prince",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince",
+                "Lord Commander of the City Watch",
+                "King Consort"
+            ],
+            "status": "deceased",
+            "birthDeath": "81 AC–130 AC",
+            "series": "hod"
+        },
+        {
+            "id": "aemma_arryn",
+            "name": "Aemma Arryn",
+            "house": "arryn",
+            "marriedInto": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "alicent_hightower",
+            "name": "Alicent Hightower",
+            "house": "hightower",
+            "marriedInto": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "rhaenyra_targaryen",
+            "name": "Rhaenyra Targaryen",
+            "alias": "The Realm's Delight / The Black Queen",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Princess",
+                "Queen of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "97 AC–130 AC",
+            "series": "hod"
+        },
+        {
+            "id": "aegon_ii",
+            "name": "Aegon II Targaryen",
+            "alias": "The Green King",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "107 AC–131 AC",
+            "series": "hod"
+        },
+        {
+            "id": "helaena_targaryen",
+            "name": "Helaena Targaryen",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen Consort"
+            ],
+            "status": "deceased",
+            "birthDeath": "109 AC–130 AC",
+            "series": "hod"
+        },
+        {
+            "id": "aemond_targaryen",
+            "name": "Aemond Targaryen",
+            "alias": "Aemond One-Eye",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince"
+            ],
+            "status": "deceased",
+            "birthDeath": "110 AC–130 AC",
+            "series": "hod"
+        },
+        {
+            "id": "daeron_targaryen_hod",
+            "name": "Daeron Targaryen",
+            "alias": "Daeron the Daring",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince"
+            ],
+            "status": "deceased",
+            "birthDeath": "114 AC–130 AC",
+            "series": "hod"
+        },
+        {
+            "id": "laena_velaryon",
+            "name": "Laena Velaryon",
+            "house": "velaryon",
+            "gender": "female",
+            "titles": [
+                "Lady"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "laenor_velaryon",
+            "name": "Laenor Velaryon",
+            "house": "velaryon",
+            "gender": "male",
+            "titles": [
+                "Heir to Driftmark"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "corlys_velaryon",
+            "name": "Corlys Velaryon",
+            "alias": "The Sea Snake",
+            "house": "velaryon",
+            "gender": "male",
+            "titles": [
+                "Lord of the Tides",
+                "Master of Driftmark"
+            ],
+            "status": "alive",
+            "series": "hod"
+        },
+        {
+            "id": "baela_targaryen",
+            "name": "Baela Targaryen",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "rhaena_targaryen_daemon",
+            "name": "Rhaena Targaryen",
+            "alias": "Daughter of Daemon",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "jacaerys_velaryon",
+            "name": "Jacaerys Velaryon",
+            "alias": "Jace",
+            "house": "velaryon",
+            "trueHouse": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "lucerys_velaryon",
+            "name": "Lucerys Velaryon",
+            "alias": "Luke",
+            "house": "velaryon",
+            "trueHouse": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "joffrey_velaryon",
+            "name": "Joffrey Velaryon",
+            "house": "velaryon",
+            "trueHouse": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "aegon_iii",
+            "name": "Aegon III Targaryen",
+            "alias": "Aegon the Dragonbane",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "120 AC–157 AC"
+        },
+        {
+            "id": "viserys_ii",
+            "name": "Viserys II Targaryen",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "122 AC–172 AC"
+        },
+        {
+            "id": "daeron_ii",
+            "name": "Daeron II Targaryen",
+            "alias": "Daeron the Good",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "myriah_martell",
+            "name": "Myriah Martell",
+            "house": "martell",
+            "marriedInto": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "maekar_i",
+            "name": "Maekar I Targaryen",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "174 AC–?"
+        },
+        {
+            "id": "dyanna_dayne",
+            "name": "Dyanna Dayne",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "aegon_v",
+            "name": "Aegon V Targaryen",
+            "alias": "Egg",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "200 AC–259 AC"
+        },
+        {
+            "id": "betha_blackwood",
+            "name": "Betha Blackwood",
+            "house": "blackwood",
+            "marriedInto": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "aemon_maester",
+            "name": "Aemon Targaryen",
+            "alias": "Maester Aemon",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Maester"
+            ],
+            "status": "deceased",
+            "birthDeath": "198 AC–300 AC",
+            "series": "got"
+        },
+        {
+            "id": "jaehaerys_ii",
+            "name": "Jaehaerys II Targaryen",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "birthDeath": "225 AC–262 AC"
+        },
+        {
+            "id": "shaera_targaryen",
+            "name": "Shaera Targaryen",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "aerys_ii",
+            "name": "Aerys II Targaryen",
+            "alias": "The Mad King",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Jaime Lannister",
+            "birthDeath": "244 AC–283 AC",
+            "series": "got"
+        },
+        {
+            "id": "rhaella_targaryen",
+            "name": "Rhaella Targaryen",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen"
+            ],
+            "status": "deceased",
+            "deathCause": "Died giving birth to Daenerys",
+            "series": "got"
+        },
+        {
+            "id": "rhaegar_targaryen",
+            "name": "Rhaegar Targaryen",
+            "alias": "The Last Dragon",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince of Dragonstone"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Robert Baratheon at the Trident",
+            "series": "got"
+        },
+        {
+            "id": "elia_martell",
+            "name": "Elia Martell",
+            "house": "martell",
+            "marriedInto": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "deceased",
+            "deathCause": "Murdered by Gregor Clegane",
+            "series": "got"
+        },
+        {
+            "id": "viserys_iii",
+            "name": "Viserys Targaryen",
+            "alias": "The Beggar King",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "King (self-styled)"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Khal Drogo with molten gold",
+            "series": "got"
+        },
+        {
+            "id": "daenerys_targaryen",
+            "name": "Daenerys Targaryen",
+            "alias": "Mother of Dragons",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen of the Andals and the First Men",
+                "Khaleesi",
+                "Breaker of Chains"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Jon Snow",
+            "series": "got"
+        },
+        {
+            "id": "rhaenys_rhaegar",
+            "name": "Rhaenys Targaryen",
+            "alias": "Daughter of Rhaegar",
+            "house": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "deceased",
+            "deathCause": "Murdered during Sack of King's Landing",
+            "series": "got"
+        },
+        {
+            "id": "aegon_rhaegar",
+            "name": "Aegon Targaryen",
+            "alias": "Son of Rhaegar and Elia",
+            "house": "targaryen",
+            "gender": "male",
+            "titles": [
+                "Prince"
+            ],
+            "status": "deceased",
+            "deathCause": "Murdered during Sack of King's Landing",
+            "series": "got"
+        },
+        {
+            "id": "cregan_stark",
+            "name": "Cregan Stark",
+            "alias": "The Old Man of the North",
+            "house": "stark",
+            "gender": "male",
+            "titles": [
+                "Lord of Winterfell",
+                "Warden of the North",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "alysanne_blackwood_stark",
+            "name": "Alysanne Blackwood",
+            "house": "blackwood",
+            "marriedInto": "stark",
+            "gender": "female",
+            "titles": [
+                "Lady of Winterfell"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "rickon_stark_cregan",
+            "name": "Rickon Stark",
+            "alias": "Son of Cregan",
+            "house": "stark",
+            "gender": "male",
+            "titles": [
+                "Lord of Winterfell"
+            ],
+            "status": "deceased",
+            "series": "hod"
+        },
+        {
+            "id": "rickard_stark",
+            "name": "Rickard Stark",
+            "house": "stark",
+            "gender": "male",
+            "titles": [
+                "Lord of Winterfell",
+                "Warden of the North"
+            ],
+            "status": "deceased",
+            "deathCause": "Burned alive by Aerys II Targaryen",
+            "series": "got"
+        },
+        {
+            "id": "lyarra_stark",
+            "name": "Lyarra Stark",
+            "house": "stark",
+            "gender": "female",
+            "titles": [
+                "Lady of Winterfell"
+            ],
+            "status": "deceased",
+            "series": "got"
+        },
+        {
+            "id": "brandon_stark_wild",
+            "name": "Brandon Stark",
+            "alias": "The Wild Wolf",
+            "house": "stark",
+            "gender": "male",
+            "titles": [
+                "Heir to Winterfell"
+            ],
+            "status": "deceased",
+            "deathCause": "Strangled by Aerys II Targaryen",
+            "series": "got"
+        },
+        {
+            "id": "eddard_stark",
+            "name": "Eddard Stark",
+            "alias": "Ned",
+            "house": "stark",
+            "gender": "male",
+            "titles": [
+                "Lord of Winterfell",
+                "Warden of the North",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "deathCause": "Executed on orders of Joffrey",
+            "series": "got"
+        },
+        {
+            "id": "catelyn_stark",
+            "name": "Catelyn Stark",
+            "alias": "Cat",
+            "house": "tully",
+            "marriedInto": "stark",
+            "gender": "female",
+            "titles": [
+                "Lady of Winterfell"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed at the Red Wedding",
+            "series": "got"
+        },
+        {
+            "id": "lyanna_stark",
+            "name": "Lyanna Stark",
+            "house": "stark",
+            "gender": "female",
+            "titles": [
+                "Lady"
+            ],
+            "status": "deceased",
+            "deathCause": "Died giving birth to Jon Snow",
+            "series": "got"
+        },
+        {
+            "id": "benjen_stark",
+            "name": "Benjen Stark",
+            "house": "stark",
+            "gender": "male",
+            "titles": [
+                "First Ranger of the Night's Watch"
+            ],
+            "status": "deceased",
+            "series": "got"
+        },
+        {
+            "id": "robb_stark",
+            "name": "Robb Stark",
+            "alias": "The Young Wolf",
+            "house": "stark",
+            "gender": "male",
+            "titles": [
+                "King in the North"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed at the Red Wedding",
+            "series": "got"
+        },
+        {
+            "id": "talisa_maegyr",
+            "name": "Talisa Maegyr",
+            "house": null,
+            "marriedInto": "stark",
+            "gender": "female",
+            "titles": [
+                "Queen in the North"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed at the Red Wedding",
+            "series": "got"
+        },
+        {
+            "id": "sansa_stark",
+            "name": "Sansa Stark",
+            "house": "stark",
+            "gender": "female",
+            "titles": [
+                "Queen in the North"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "arya_stark",
+            "name": "Arya Stark",
+            "alias": "No One",
+            "house": "stark",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "bran_stark",
+            "name": "Brandon Stark",
+            "alias": "Bran / The Three-Eyed Raven",
+            "house": "stark",
+            "gender": "male",
+            "titles": [
+                "King of the Six Kingdoms",
+                "The Three-Eyed Raven"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "rickon_stark",
+            "name": "Rickon Stark",
+            "house": "stark",
+            "gender": "male",
+            "titles": [
+                "Prince of Winterfell"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Ramsay Bolton",
+            "series": "got"
+        },
+        {
+            "id": "jon_snow",
+            "name": "Jon Snow",
+            "alias": "Aegon Targaryen",
+            "house": "stark",
+            "trueHouse": "targaryen",
+            "raisedAs": "stark",
+            "gender": "male",
+            "titles": [
+                "King in the North",
+                "Lord Commander"
+            ],
+            "status": "alive",
+            "bastard": true,
+            "legitimized": true,
+            "series": "got"
+        },
+        {
+            "id": "hoster_tully",
+            "name": "Hoster Tully",
+            "house": "tully",
+            "gender": "male",
+            "titles": [
+                "Lord of Riverrun"
+            ],
+            "status": "deceased",
+            "series": "got"
+        },
+        {
+            "id": "lann_clever",
+            "name": "Lann the Clever",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Founder of House Lannister"
+            ],
+            "status": "deceased",
+            "note": "Legendary founder who tricked the Casterlys"
+        },
+        {
+            "id": "tytos_lannister",
+            "name": "Tytos Lannister",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Lord of Casterly Rock"
+            ],
+            "status": "deceased",
+            "birthDeath": "220 AC–267 AC"
+        },
+        {
+            "id": "jeyne_marbrand",
+            "name": "Jeyne Marbrand",
+            "house": "lannister",
+            "gender": "female",
+            "titles": [
+                "Lady of Casterly Rock"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "tywin_lannister",
+            "name": "Tywin Lannister",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Lord of Casterly Rock",
+                "Warden of the West",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Tyrion with a crossbow",
+            "birthDeath": "242 AC–300 AC",
+            "series": "got"
+        },
+        {
+            "id": "joanna_lannister",
+            "name": "Joanna Lannister",
+            "house": "lannister",
+            "gender": "female",
+            "titles": [
+                "Lady of Casterly Rock"
+            ],
+            "status": "deceased",
+            "deathCause": "Died giving birth to Tyrion",
+            "birthDeath": "245 AC–273 AC",
+            "series": "got"
+        },
+        {
+            "id": "kevan_lannister",
+            "name": "Kevan Lannister",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Lord Regent",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed in the Sept explosion",
+            "birthDeath": "244 AC–300 AC",
+            "series": "got"
+        },
+        {
+            "id": "dorna_swyft",
+            "name": "Dorna Swyft",
+            "house": "lannister",
+            "gender": "female",
+            "titles": [
+                "Lady"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "genna_lannister",
+            "name": "Genna Lannister",
+            "house": "lannister",
+            "marriedInto": "frey",
+            "gender": "female",
+            "titles": [
+                "Lady of Riverrun"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "tygett_lannister",
+            "name": "Tygett Lannister",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Ser"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "gerion_lannister",
+            "name": "Gerion Lannister",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Explorer"
+            ],
+            "status": "deceased",
+            "note": "Lost searching for Brightroar"
+        },
+        {
+            "id": "cersei_lannister",
+            "name": "Cersei Lannister",
+            "house": "lannister",
+            "gender": "female",
+            "titles": [
+                "Queen of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "deathCause": "Crushed in the Red Keep collapse",
+            "birthDeath": "266 AC–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "jaime_lannister",
+            "name": "Jaime Lannister",
+            "alias": "The Kingslayer",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Lord Commander of the Kingsguard"
+            ],
+            "status": "deceased",
+            "deathCause": "Crushed in the Red Keep collapse",
+            "birthDeath": "266 AC–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "tyrion_lannister",
+            "name": "Tyrion Lannister",
+            "alias": "The Imp",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Hand of the King",
+                "Lord of Casterly Rock"
+            ],
+            "status": "alive",
+            "birthDeath": "273 AC–Alive",
+            "series": "got"
+        },
+        {
+            "id": "robert_baratheon",
+            "name": "Robert Baratheon",
+            "alias": "The Usurper",
+            "house": "baratheon",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by a boar (Cersei's plot)",
+            "series": "got"
+        },
+        {
+            "id": "joffrey_baratheon",
+            "name": "Joffrey Baratheon",
+            "house": "baratheon",
+            "trueHouse": "lannister",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "deathCause": "Poisoned at his wedding",
+            "birthDeath": "286 AC–300 AC",
+            "series": "got"
+        },
+        {
+            "id": "myrcella_baratheon",
+            "name": "Myrcella Baratheon",
+            "house": "baratheon",
+            "trueHouse": "lannister",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "deceased",
+            "deathCause": "Poisoned by Ellaria Sand",
+            "birthDeath": "290 AC–300 AC",
+            "series": "got"
+        },
+        {
+            "id": "tommen_baratheon",
+            "name": "Tommen Baratheon",
+            "house": "baratheon",
+            "trueHouse": "lannister",
+            "gender": "male",
+            "titles": [
+                "King of the Seven Kingdoms"
+            ],
+            "status": "deceased",
+            "deathCause": "Suicide after Sept explosion",
+            "birthDeath": "291 AC–303 AC",
+            "series": "got"
+        },
+        {
+            "id": "lancel_lannister",
+            "name": "Lancel Lannister",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Knight",
+                "Faith Militant"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed in the Sept explosion",
+            "birthDeath": "282 AC–303 AC",
+            "series": "got"
+        },
+        {
+            "id": "tyrek_lannister",
+            "name": "Tyrek Lannister",
+            "house": "lannister",
+            "gender": "male",
+            "titles": [
+                "Squire"
+            ],
+            "status": "unknown",
+            "note": "Disappeared during King's Landing riots",
+            "series": "got"
+        },
+        {
+            "id": "orys_baratheon",
+            "name": "Orys Baratheon",
+            "house": "baratheon",
+            "gender": "male",
+            "titles": [
+                "Founder of House Baratheon",
+                "Lord of Storm's End"
+            ],
+            "status": "deceased",
+            "note": "Rumored bastard brother of Aegon I"
+        },
+        {
+            "id": "lyonel_baratheon",
+            "name": "Lyonel Baratheon",
+            "alias": "The Laughing Storm",
+            "house": "baratheon",
+            "gender": "male",
+            "titles": [
+                "Lord of Storm's End"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "ormund_baratheon",
+            "name": "Ormund Baratheon",
+            "house": "baratheon",
+            "gender": "male",
+            "titles": [
+                "Lord of Storm's End",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–260 AC"
+        },
+        {
+            "id": "rhaelle_targaryen_baratheon",
+            "name": "Rhaelle Targaryen",
+            "house": "targaryen",
+            "marriedInto": "baratheon",
+            "gender": "female",
+            "titles": [
+                "Lady of Storm's End"
+            ],
+            "status": "deceased",
+            "birthDeath": "245 AC–Unknown"
+        },
+        {
+            "id": "steffon_baratheon",
+            "name": "Steffon Baratheon",
+            "house": "baratheon",
+            "gender": "male",
+            "titles": [
+                "Lord of Storm's End"
+            ],
+            "status": "deceased",
+            "deathCause": "Drowned in Shipbreaker Bay",
+            "birthDeath": "246 AC–278 AC",
+            "series": "got"
+        },
+        {
+            "id": "cassana_estermont",
+            "name": "Cassana Estermont",
+            "house": "estermont",
+            "marriedInto": "baratheon",
+            "gender": "female",
+            "titles": [
+                "Lady of Storm's End"
+            ],
+            "status": "deceased",
+            "deathCause": "Drowned in Shipbreaker Bay",
+            "series": "got"
+        },
+        {
+            "id": "stannis_baratheon",
+            "name": "Stannis Baratheon",
+            "house": "baratheon",
+            "gender": "male",
+            "titles": [
+                "King (Claimant)",
+                "Lord of Dragonstone"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Brienne of Tarth",
+            "birthDeath": "264 AC–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "selyse_florent",
+            "name": "Selyse Florent",
+            "house": "florent",
+            "marriedInto": "baratheon",
+            "gender": "female",
+            "titles": [
+                "Queen (Claimant)"
+            ],
+            "status": "deceased",
+            "deathCause": "Suicide by hanging",
+            "series": "got"
+        },
+        {
+            "id": "shireen_baratheon",
+            "name": "Shireen Baratheon",
+            "house": "baratheon",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "deceased",
+            "deathCause": "Burned alive as sacrifice",
+            "birthDeath": "286 AC–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "renly_baratheon",
+            "name": "Renly Baratheon",
+            "house": "baratheon",
+            "gender": "male",
+            "titles": [
+                "King (Claimant)",
+                "Lord of Storm's End"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by a shadow assassin",
+            "birthDeath": "277 AC–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "margaery_tyrell",
+            "name": "Margaery Tyrell",
+            "house": "tyrell",
+            "marriedInto": "baratheon",
+            "gender": "female",
+            "titles": [
+                "Queen Consort"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed in the Sept explosion",
+            "birthDeath": "283 AC–303 AC",
+            "series": "got"
+        },
+        {
+            "id": "gendry_baratheon",
+            "name": "Gendry Baratheon",
+            "alias": "The Bull",
+            "house": "baratheon",
+            "gender": "male",
+            "titles": [
+                "Lord of Storm's End"
+            ],
+            "status": "alive",
+            "bastard": true,
+            "legitimized": true,
+            "birthDeath": "284 AC–Alive",
+            "series": "got"
+        },
+        {
+            "id": "edric_storm",
+            "name": "Edric Storm",
+            "house": "baratheon",
+            "gender": "male",
+            "titles": [
+                "Bastard of Robert"
+            ],
+            "status": "alive",
+            "bastard": true,
+            "series": "got"
+        },
+        {
+            "id": "alester_tyrell",
+            "name": "Alester Tyrell",
+            "house": "tyrell",
+            "gender": "male",
+            "titles": [
+                "Steward of Highgarden"
+            ],
+            "status": "deceased",
+            "birthDeath": "Ancient Era–Unknown"
+        },
+        {
+            "id": "harlen_tyrell",
+            "name": "Harlen Tyrell",
+            "house": "tyrell",
+            "gender": "male",
+            "titles": [
+                "Lord of Highgarden"
+            ],
+            "status": "deceased",
+            "birthDeath": "During Conquest–Unknown"
+        },
+        {
+            "id": "luthor_tyrell",
+            "name": "Luthor Tyrell",
+            "house": "tyrell",
+            "gender": "male",
+            "titles": [
+                "Lord of Highgarden"
+            ],
+            "status": "deceased",
+            "birthDeath": "237 AC–Unknown"
+        },
+        {
+            "id": "olenna_tyrell",
+            "name": "Olenna Tyrell",
+            "alias": "The Queen of Thorns",
+            "house": "tyrell",
+            "marriedInto": "redwyne",
+            "gender": "female",
+            "titles": [
+                "Lady of Highgarden"
+            ],
+            "status": "deceased",
+            "deathCause": "Poison (suicide) after Highgarden sack",
+            "birthDeath": "243 AC–303 AC",
+            "series": "got"
+        },
+        {
+            "id": "mace_tyrell",
+            "name": "Mace Tyrell",
+            "house": "tyrell",
+            "gender": "male",
+            "titles": [
+                "Lord of Highgarden",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed in the Sept explosion",
+            "birthDeath": "256 AC–303 AC",
+            "series": "got"
+        },
+        {
+            "id": "alerie_hightower",
+            "name": "Alerie Hightower",
+            "house": "hightower",
+            "marriedInto": "tyrell",
+            "gender": "female",
+            "titles": [
+                "Lady of Highgarden"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "willas_tyrell",
+            "name": "Willas Tyrell",
+            "house": "tyrell",
+            "gender": "male",
+            "titles": [
+                "Heir to Highgarden"
+            ],
+            "status": "alive",
+            "birthDeath": "277 AC–Alive"
+        },
+        {
+            "id": "garlan_tyrell",
+            "name": "Garlan Tyrell",
+            "alias": "Garlan the Gallant",
+            "house": "tyrell",
+            "gender": "male",
+            "titles": [
+                "Knight",
+                "Lord of Brightwater Keep"
+            ],
+            "status": "alive",
+            "birthDeath": "279 AC–Alive"
+        },
+        {
+            "id": "leonette_fossoway",
+            "name": "Leonette Fossoway",
+            "house": "fossoway",
+            "marriedInto": "tyrell",
+            "gender": "female",
+            "titles": [
+                "Lady of Brightwater Keep"
+            ],
+            "status": "alive"
+        },
+        {
+            "id": "loras_tyrell",
+            "name": "Loras Tyrell",
+            "alias": "The Knight of Flowers",
+            "house": "tyrell",
+            "gender": "male",
+            "titles": [
+                "Kingsguard",
+                "Knight"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed in the Sept explosion",
+            "birthDeath": "283 AC–303 AC",
+            "series": "got"
+        },
+        {
+            "id": "nymeria_martell",
+            "name": "Nymeria",
+            "house": "martell",
+            "gender": "female",
+            "titles": [
+                "Queen of the Rhoynar",
+                "Founder of House Nymeros Martell"
+            ],
+            "status": "deceased",
+            "birthDeath": "Ancient Era–Unknown"
+        },
+        {
+            "id": "mors_martell",
+            "name": "Mors Martell",
+            "house": "martell",
+            "gender": "male",
+            "titles": [
+                "Lord of Sunspear"
+            ],
+            "status": "deceased",
+            "birthDeath": "Ancient Era–Unknown"
+        },
+        {
+            "id": "lewyn_martell",
+            "name": "Lewyn Martell",
+            "house": "martell",
+            "gender": "male",
+            "titles": [
+                "Kingsguard"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed at the Trident",
+            "birthDeath": "Unknown–283 AC",
+            "series": "got"
+        },
+        {
+            "id": "princess_of_dorne",
+            "name": "Princess of Dorne (Unnamed)",
+            "house": "martell",
+            "gender": "female",
+            "titles": [
+                "Princess of Dorne"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "doran_martell",
+            "name": "Doran Martell",
+            "house": "martell",
+            "gender": "male",
+            "titles": [
+                "Prince of Dorne"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Ellaria Sand",
+            "series": "got"
+        },
+        {
+            "id": "mellario_norvos",
+            "name": "Mellario of Norvos",
+            "house": "martell",
+            "gender": "female",
+            "titles": [
+                "Princess Consort"
+            ],
+            "status": "alive"
+        },
+        {
+            "id": "oberyn_martell",
+            "name": "Oberyn Martell",
+            "alias": "The Red Viper",
+            "house": "martell",
+            "gender": "male",
+            "titles": [
+                "Prince of Dorne"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Gregor Clegane",
+            "birthDeath": "257 AC–300 AC",
+            "series": "got"
+        },
+        {
+            "id": "ellaria_sand",
+            "name": "Ellaria Sand",
+            "house": "martell",
+            "gender": "female",
+            "titles": [
+                "Paramour of Oberyn"
+            ],
+            "status": "deceased",
+            "deathCause": "Imprisoned and left to die by Cersei",
+            "series": "got"
+        },
+        {
+            "id": "arianne_martell",
+            "name": "Arianne Martell",
+            "house": "martell",
+            "gender": "female",
+            "titles": [
+                "Heir to Sunspear"
+            ],
+            "status": "alive",
+            "birthDeath": "276 AC–Alive"
+        },
+        {
+            "id": "quentyn_martell",
+            "name": "Quentyn Martell",
+            "house": "martell",
+            "gender": "male",
+            "titles": [
+                "Prince of Dorne"
+            ],
+            "status": "deceased",
+            "deathCause": "Burned by Rhaegal",
+            "birthDeath": "281 AC–300 AC",
+            "series": "got"
+        },
+        {
+            "id": "trystane_martell",
+            "name": "Trystane Martell",
+            "house": "martell",
+            "gender": "male",
+            "titles": [
+                "Prince of Dorne"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Sand Snakes",
+            "birthDeath": "287 AC–303 AC",
+            "series": "got"
+        },
+        {
+            "id": "obara_sand",
+            "name": "Obara Sand",
+            "house": "martell",
+            "gender": "female",
+            "titles": [
+                "Sand Snake"
+            ],
+            "status": "deceased",
+            "bastard": true,
+            "series": "got"
+        },
+        {
+            "id": "nymeria_sand",
+            "name": "Nymeria Sand",
+            "house": "martell",
+            "gender": "female",
+            "titles": [
+                "Sand Snake"
+            ],
+            "status": "deceased",
+            "bastard": true,
+            "series": "got"
+        },
+        {
+            "id": "tyene_sand",
+            "name": "Tyene Sand",
+            "house": "martell",
+            "gender": "female",
+            "titles": [
+                "Sand Snake"
+            ],
+            "status": "deceased",
+            "bastard": true,
+            "series": "got"
+        },
+        {
+            "id": "artys_arryn",
+            "name": "Artys Arryn",
+            "alias": "The Falcon Knight",
+            "house": "arryn",
+            "gender": "male",
+            "titles": [
+                "King of Mountain and Vale"
+            ],
+            "status": "deceased",
+            "birthDeath": "Age of Heroes–Unknown"
+        },
+        {
+            "id": "ronnel_arryn",
+            "name": "Ronnel Arryn",
+            "alias": "The King Who Flew",
+            "house": "arryn",
+            "gender": "male",
+            "titles": [
+                "King of Mountain and Vale"
+            ],
+            "status": "deceased",
+            "birthDeath": "During Conquest–Unknown"
+        },
+        {
+            "id": "jon_arryn",
+            "name": "Jon Arryn",
+            "house": "arryn",
+            "gender": "male",
+            "titles": [
+                "Lord of the Eyrie",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "deathCause": "Poisoned by Lysa Arryn",
+            "birthDeath": "Unknown–298 AC",
+            "series": "got"
+        },
+        {
+            "id": "jeyne_royce",
+            "name": "Jeyne Royce",
+            "house": "royce",
+            "marriedInto": "arryn",
+            "gender": "female",
+            "titles": [
+                "Lady of the Eyrie"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "rowena_arryn",
+            "name": "Rowena Arryn",
+            "house": "arryn",
+            "gender": "female",
+            "titles": [
+                "Lady of the Eyrie"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "lysa_arryn",
+            "name": "Lysa Arryn",
+            "house": "tully",
+            "marriedInto": "arryn",
+            "gender": "female",
+            "titles": [
+                "Lady Regent of the Vale"
+            ],
+            "status": "deceased",
+            "deathCause": "Pushed out the Moon Door by Petyr Baelish",
+            "birthDeath": "266 AC–300 AC",
+            "series": "got"
+        },
+        {
+            "id": "robert_arryn",
+            "name": "Robert Arryn",
+            "alias": "Sweetrobin",
+            "house": "arryn",
+            "gender": "male",
+            "titles": [
+                "Lord of the Eyrie"
+            ],
+            "status": "alive",
+            "birthDeath": "292 AC–Alive",
+            "series": "got"
+        },
+        {
+            "id": "alys_arryn",
+            "name": "Alys Arryn",
+            "house": "arryn",
+            "gender": "female",
+            "titles": [
+                "Lady of the Vale (cousin line)"
+            ],
+            "status": "alive"
+        },
+        {
+            "id": "benedict_justman",
+            "name": "Benedict I Justman",
+            "house": "tully",
+            "gender": "male",
+            "titles": [
+                "King of the Trident"
+            ],
+            "status": "deceased",
+            "birthDeath": "Ancient Era–Unknown"
+        },
+        {
+            "id": "edmyn_tully",
+            "name": "Edmyn Tully",
+            "house": "tully",
+            "gender": "male",
+            "titles": [
+                "Lord of Riverrun"
+            ],
+            "status": "deceased",
+            "birthDeath": "During Conquest–Unknown"
+        },
+        {
+            "id": "minisa_whent",
+            "name": "Minisa Whent",
+            "house": "whent",
+            "marriedInto": "tully",
+            "gender": "female",
+            "titles": [
+                "Lady of Riverrun"
+            ],
+            "status": "deceased",
+            "series": "got"
+        },
+        {
+            "id": "edmure_tully",
+            "name": "Edmure Tully",
+            "house": "tully",
+            "gender": "male",
+            "titles": [
+                "Lord of Riverrun"
+            ],
+            "status": "alive",
+            "birthDeath": "267 AC–Alive",
+            "series": "got"
+        },
+        {
+            "id": "roslin_frey",
+            "name": "Roslin Frey",
+            "house": "frey",
+            "marriedInto": "tully",
+            "gender": "female",
+            "titles": [
+                "Lady of Riverrun"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "brynden_tully",
+            "name": "Brynden Tully",
+            "alias": "The Blackfish",
+            "house": "tully",
+            "gender": "male",
+            "titles": [
+                "Knight of the Gate",
+                "Lord Protector"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "grey_king",
+            "name": "The Grey King",
+            "house": "greyjoy",
+            "gender": "male",
+            "titles": [
+                "King of the Iron Islands"
+            ],
+            "status": "deceased",
+            "birthDeath": "Age of Heroes–Unknown"
+        },
+        {
+            "id": "quellon_greyjoy",
+            "name": "Quellon Greyjoy",
+            "house": "greyjoy",
+            "gender": "male",
+            "titles": [
+                "Lord of the Iron Islands"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–289 AC"
+        },
+        {
+            "id": "balon_greyjoy",
+            "name": "Balon Greyjoy",
+            "house": "greyjoy",
+            "gender": "male",
+            "titles": [
+                "Lord Reaper of Pyke",
+                "King of the Iron Islands"
+            ],
+            "status": "deceased",
+            "deathCause": "Fell from a bridge (murdered by Euron)",
+            "birthDeath": "260 AC–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "alannys_harlaw",
+            "name": "Alannys Harlaw",
+            "house": "harlaw",
+            "marriedInto": "greyjoy",
+            "gender": "female",
+            "titles": [
+                "Lady of Pyke"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "euron_greyjoy",
+            "name": "Euron Greyjoy",
+            "alias": "Crow's Eye",
+            "house": "greyjoy",
+            "gender": "male",
+            "titles": [
+                "King of the Iron Islands"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Jaime Lannister",
+            "birthDeath": "Unknown–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "victarion_greyjoy",
+            "name": "Victarion Greyjoy",
+            "house": "greyjoy",
+            "gender": "male",
+            "titles": [
+                "Lord Captain of the Iron Fleet"
+            ],
+            "status": "alive"
+        },
+        {
+            "id": "aeron_greyjoy",
+            "name": "Aeron Greyjoy",
+            "alias": "Damphair",
+            "house": "greyjoy",
+            "gender": "male",
+            "titles": [
+                "Priest of the Drowned God"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "rodrik_greyjoy",
+            "name": "Rodrik Greyjoy",
+            "house": "greyjoy",
+            "gender": "male",
+            "titles": [
+                "Prince of Pyke"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed during Greyjoy Rebellion",
+            "birthDeath": "Unknown–289 AC"
+        },
+        {
+            "id": "maron_greyjoy",
+            "name": "Maron Greyjoy",
+            "house": "greyjoy",
+            "gender": "male",
+            "titles": [
+                "Prince of Pyke"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed during Greyjoy Rebellion",
+            "birthDeath": "Unknown–289 AC"
+        },
+        {
+            "id": "asha_greyjoy",
+            "name": "Asha Greyjoy",
+            "alias": "Yara Greyjoy (Show)",
+            "house": "greyjoy",
+            "gender": "female",
+            "titles": [
+                "Lady of the Iron Islands"
+            ],
+            "status": "alive",
+            "birthDeath": "275 AC–Alive",
+            "series": "got"
+        },
+        {
+            "id": "theon_greyjoy",
+            "name": "Theon Greyjoy",
+            "alias": "Reek",
+            "house": "greyjoy",
+            "gender": "male",
+            "titles": [
+                "Prince of Pyke"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by the Night King defending Bran",
+            "birthDeath": "278 AC–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "maege_mormont",
+            "name": "Maege Mormont",
+            "house": "mormont",
+            "gender": "female",
+            "titles": [
+                "Lady of Bear Island"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "dacey_mormont",
+            "name": "Dacey Mormont",
+            "house": "mormont",
+            "gender": "female",
+            "titles": [
+                "Heir to Bear Island"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed at the Red Wedding",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "alysane_mormont",
+            "name": "Alysane Mormont",
+            "house": "mormont",
+            "gender": "female",
+            "titles": [
+                "Warrior of Bear Island"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "lyanna_mormont",
+            "name": "Lyanna Mormont",
+            "house": "mormont",
+            "gender": "female",
+            "titles": [
+                "Lady of Bear Island"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by a wight giant",
+            "birthDeath": "293 AC–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "jeor_mormont",
+            "name": "Jeor Mormont",
+            "alias": "The Old Bear",
+            "house": "mormont",
+            "gender": "male",
+            "titles": [
+                "Lord Commander of the Night's Watch"
+            ],
+            "status": "deceased",
+            "deathCause": "Mutiny at Craster's Keep",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "jorah_mormont",
+            "name": "Jorah Mormont",
+            "alias": "Jorah the Andal",
+            "house": "mormont",
+            "gender": "male",
+            "titles": [
+                "Knight in Exile",
+                "Advisor to Daenerys Targaryen"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed defending Daenerys",
+            "birthDeath": "265 AC–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "lynesse_hightower",
+            "name": "Lynesse Hightower",
+            "house": "hightower",
+            "marriedInto": "mormont",
+            "gender": "female",
+            "titles": [
+                "Lady of House Hightower"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "howland_reed",
+            "name": "Howland Reed",
+            "house": "reed",
+            "gender": "male",
+            "titles": [
+                "Lord of Greywater Watch"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "jyana_reed",
+            "name": "Jyana Reed",
+            "house": "reed",
+            "gender": "female",
+            "titles": [
+                "Lady of Greywater Watch"
+            ],
+            "status": "alive"
+        },
+        {
+            "id": "meera_reed",
+            "name": "Meera Reed",
+            "house": "reed",
+            "gender": "female",
+            "titles": [
+                "Huntress of Greywater Watch"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "jojen_reed",
+            "name": "Jojen Reed",
+            "house": "reed",
+            "gender": "male",
+            "titles": [
+                "Greenseer"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by wights",
+            "birthDeath": "Unknown–303 AC",
+            "series": "got"
+        },
+        {
+            "id": "rickard_karstark",
+            "name": "Rickard Karstark",
+            "house": "karstark",
+            "gender": "male",
+            "titles": [
+                "Lord of Karhold"
+            ],
+            "status": "deceased",
+            "deathCause": "Executed by Robb Stark",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "harrion_karstark",
+            "name": "Harrion Karstark",
+            "house": "karstark",
+            "gender": "male",
+            "titles": [
+                "Lord of Karhold"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "alys_karstark",
+            "name": "Alys Karstark",
+            "house": "karstark",
+            "gender": "female",
+            "titles": [
+                "Lady of Karhold"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "sigorn_thenn",
+            "name": "Sigorn of Thenn",
+            "house": "thenn",
+            "marriedInto": "karstark",
+            "gender": "male",
+            "titles": [
+                "Lord of Karhold"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "greatjon_umber",
+            "name": "Greatjon Umber",
+            "house": "umber",
+            "gender": "male",
+            "titles": [
+                "Lord of Last Hearth"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "smalljon_umber",
+            "name": "Smalljon Umber",
+            "house": "umber",
+            "gender": "male",
+            "titles": [
+                "Heir to Last Hearth"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed at the Battle of the Bastards",
+            "birthDeath": "Unknown–304 AC",
+            "series": "got"
+        },
+        {
+            "id": "ned_umber",
+            "name": "Ned Umber",
+            "house": "umber",
+            "gender": "male",
+            "titles": [
+                "Lord of Last Hearth"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by the Night King",
+            "birthDeath": "Unknown–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "helman_tallhart",
+            "name": "Helman Tallhart",
+            "house": "tallhart",
+            "gender": "male",
+            "titles": [
+                "Lord of Torrhen's Square"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "cley_cerwyn",
+            "name": "Cley Cerwyn",
+            "house": "cerwyn",
+            "gender": "male",
+            "titles": [
+                "Lord of Castle Cerwyn"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "jonelle_cerwyn",
+            "name": "Jonelle Cerwyn",
+            "house": "cerwyn",
+            "gender": "female",
+            "titles": [
+                "Lady of Castle Cerwyn"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "galbart_glover",
+            "name": "Galbart Glover",
+            "house": "glover",
+            "gender": "male",
+            "titles": [
+                "Lord of Deepwood Motte"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "robett_glover",
+            "name": "Robett Glover",
+            "house": "glover",
+            "gender": "male",
+            "titles": [
+                "Lord of Deepwood Motte"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "lord_locke",
+            "name": "Lord Locke",
+            "house": "locke",
+            "gender": "male",
+            "titles": [
+                "Lord of Oldcastle"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "unnamed_locke_son",
+            "name": "Unnamed Locke Son",
+            "house": "locke",
+            "gender": "male",
+            "titles": [
+                "Heir of House Locke"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "locke_bolton",
+            "name": "Locke",
+            "house": "locke",
+            "gender": "male",
+            "titles": [
+                "Soldier in Bolton Service"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–300 AC",
+            "series": "got"
+        },
+        {
+            "id": "willam_dustin",
+            "name": "Willam Dustin",
+            "house": "dustin",
+            "gender": "male",
+            "titles": [
+                "Lord of Barrowlands"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–283 AC",
+            "series": "got"
+        },
+        {
+            "id": "rodrik_ryswell",
+            "name": "Rodrik Ryswell",
+            "house": "ryswell",
+            "gender": "male",
+            "titles": [
+                "Lord of the Rills"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "barbrey_dustin",
+            "name": "Barbrey Dustin",
+            "house": "dustin",
+            "marriedInto": "ryswell",
+            "gender": "female",
+            "titles": [
+                "Lady of Barrowlands"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "robar_royce_ancient",
+            "name": "Robar Royce",
+            "house": "royce",
+            "gender": "male",
+            "titles": [
+                "Ancient King of the First Men"
+            ],
+            "status": "deceased",
+            "birthDeath": "Age of Heroes–Unknown"
+        },
+        {
+            "id": "yohn_royce",
+            "name": "Yohn Royce",
+            "alias": "Bronze Yohn",
+            "house": "royce",
+            "gender": "male",
+            "titles": [
+                "Lord of Runestone"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "andar_royce",
+            "name": "Andar Royce",
+            "house": "royce",
+            "gender": "male",
+            "titles": [
+                "Knight of the Vale"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "robar_royce",
+            "name": "Robar Royce",
+            "house": "royce",
+            "gender": "male",
+            "titles": [
+                "Knight of the Rainbow Guard"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "waymar_royce",
+            "name": "Waymar Royce",
+            "house": "royce",
+            "gender": "male",
+            "titles": [
+                "Ranger of the Night's Watch"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–298 AC",
+            "series": "got"
+        },
+        {
+            "id": "theomore_manderly",
+            "name": "Theomore Manderly",
+            "house": "manderly",
+            "gender": "male",
+            "titles": [
+                "Former Lord of White Harbor"
+            ],
+            "status": "deceased"
+        },
+        {
+            "id": "wyman_manderly",
+            "name": "Wyman Manderly",
+            "house": "manderly",
+            "gender": "male",
+            "titles": [
+                "Lord of White Harbor"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "wylis_manderly",
+            "name": "Wylis Manderly",
+            "house": "manderly",
+            "gender": "male",
+            "titles": [
+                "Heir to White Harbor"
+            ],
+            "status": "alive",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "wendel_manderly",
+            "name": "Wendel Manderly",
+            "house": "manderly",
+            "gender": "male",
+            "titles": [
+                "Knight of House Manderly"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "wynafryd_manderly",
+            "name": "Wynafryd Manderly",
+            "house": "manderly",
+            "gender": "female",
+            "titles": [
+                "Lady of White Harbor"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "wylla_manderly",
+            "name": "Wylla Manderly",
+            "house": "manderly",
+            "gender": "female",
+            "titles": [
+                "Member of House Manderly"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "rogar_bolton",
+            "name": "Rogar Bolton",
+            "house": "bolton",
+            "gender": "male",
+            "titles": [
+                "Ancient King of the First Men"
+            ],
+            "status": "deceased",
+            "birthDeath": "Age of Heroes–Unknown"
+        },
+        {
+            "id": "roose_bolton",
+            "name": "Roose Bolton",
+            "house": "bolton",
+            "gender": "male",
+            "titles": [
+                "Lord of the Dreadfort",
+                "Warden of the North"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Ramsay Bolton",
+            "birthDeath": "Unknown–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "walda_bolton",
+            "name": "Walda Bolton",
+            "alias": "Fat Walda",
+            "house": "frey",
+            "marriedInto": "bolton",
+            "gender": "female",
+            "titles": [
+                "Lady of the Dreadfort"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by Ramsay's hounds",
+            "birthDeath": "Unknown–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "ramsay_bolton",
+            "name": "Ramsay Bolton",
+            "house": "bolton",
+            "gender": "male",
+            "titles": [
+                "Lord of Winterfell",
+                "Warden of the North"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed by his own hounds",
+            "birthDeath": "Unknown–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "jason_mallister",
+            "name": "Jason Mallister",
+            "house": "mallister",
+            "gender": "male",
+            "titles": [
+                "Lord of Seagard"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "patrek_mallister",
+            "name": "Patrek Mallister",
+            "house": "mallister",
+            "gender": "male",
+            "titles": [
+                "Heir to Seagard"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "marq_piper",
+            "name": "Marq Piper",
+            "house": "piper",
+            "gender": "male",
+            "titles": [
+                "Lord of Pinkmaiden"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "jonos_bracken",
+            "name": "Jonos Bracken",
+            "house": "bracken",
+            "gender": "male",
+            "titles": [
+                "Lord of Stone Hedge"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "eldon_estermont",
+            "name": "Eldon Estermont",
+            "house": "estermont",
+            "gender": "male",
+            "titles": [
+                "Lord of Greenstone"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "aemon_estermont",
+            "name": "Aemon Estermont",
+            "house": "estermont",
+            "gender": "male",
+            "titles": [
+                "Member of House Estermont"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "arianne_estermont",
+            "name": "Arianne Estermont",
+            "house": "estermont",
+            "gender": "female",
+            "titles": [
+                "Member of House Estermont"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "andrew_estermont",
+            "name": "Andrew Estermont",
+            "house": "estermont",
+            "gender": "male",
+            "titles": [
+                "Member of House Estermont"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "balon_swann",
+            "name": "Balon Swann",
+            "house": "swann",
+            "gender": "male",
+            "titles": [
+                "Knight of the Kingsguard"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "donnel_swann",
+            "name": "Donnel Swann",
+            "house": "swann",
+            "gender": "male",
+            "titles": [
+                "Knight of House Swann"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "bryce_caron",
+            "name": "Bryce Caron",
+            "house": "caron",
+            "gender": "male",
+            "titles": [
+                "Lord of Nightsong"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "selwyn_tarth",
+            "name": "Selwyn Tarth",
+            "house": "tarth",
+            "gender": "male",
+            "titles": [
+                "Lord of Evenfall Hall"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "brienne_tarth",
+            "name": "Brienne of Tarth",
+            "house": "tarth",
+            "gender": "female",
+            "titles": [
+                "Knight of the Seven Kingdoms"
+            ],
+            "status": "alive",
+            "birthDeath": "280 AC–Alive",
+            "series": "got"
+        },
+        {
+            "id": "arthur_dayne",
+            "name": "Arthur Dayne",
+            "alias": "Sword of the Morning",
+            "house": "dayne",
+            "gender": "male",
+            "titles": [
+                "Knight of the Kingsguard"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–283 AC",
+            "series": "got"
+        },
+        {
+            "id": "ashara_dayne",
+            "name": "Ashara Dayne",
+            "house": "dayne",
+            "gender": "female",
+            "titles": [
+                "Lady of Starfall"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–283 AC",
+            "series": "got"
+        },
+        {
+            "id": "edric_dayne",
+            "name": "Edric Dayne",
+            "house": "dayne",
+            "gender": "male",
+            "titles": [
+                "Lord of Starfall"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "gawen_westerling",
+            "name": "Gawen Westerling",
+            "house": "westerling",
+            "gender": "male",
+            "titles": [
+                "Lord of the Crag"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "jeyne_westerling",
+            "name": "Jeyne Westerling",
+            "house": "westerling",
+            "gender": "female",
+            "titles": [
+                "Lady of the Crag"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "rollam_westerling",
+            "name": "Rollam Westerling",
+            "house": "westerling",
+            "gender": "male",
+            "titles": [
+                "Knight of House Westerling"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "elenya_westerling",
+            "name": "Elenya Westerling",
+            "house": "westerling",
+            "gender": "female",
+            "titles": [
+                "Member of House Westerling"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "franklyn_fowler",
+            "name": "Franklyn Fowler",
+            "house": "fowler",
+            "gender": "male",
+            "titles": [
+                "Lord of Skyreach"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "arwyn_oakheart",
+            "name": "Arwyn Oakheart",
+            "house": "oakheart",
+            "gender": "female",
+            "titles": [
+                "Lady of Old Oak"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "arys_oakheart",
+            "name": "Arys Oakheart",
+            "house": "oakheart",
+            "gender": "male",
+            "titles": [
+                "Knight of the Kingsguard"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "alester_florent",
+            "name": "Alester Florent",
+            "house": "florent",
+            "gender": "male",
+            "titles": [
+                "Lord of Brightwater Keep"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–299 AC",
+            "series": "got"
+        },
+        {
+            "id": "axell_florent",
+            "name": "Axell Florent",
+            "house": "florent",
+            "gender": "male",
+            "titles": [
+                "Knight; Advisor to Stannis Baratheon"
+            ],
+            "status": "deceased",
+            "birthDeath": "Unknown–305 AC",
+            "series": "got"
+        },
+        {
+            "id": "anders_yronwood",
+            "name": "Anders Yronwood",
+            "house": "yronwood",
+            "gender": "male",
+            "titles": [
+                "Lord of Yronwood"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "cletus_yronwood",
+            "name": "Cletus Yronwood",
+            "house": "yronwood",
+            "gender": "male",
+            "titles": [
+                "Heir to Yronwood"
+            ],
+            "status": "alive",
+            "series": "got"
+        },
+        {
+            "id": "otto_hightower",
+            "name": "Otto Hightower",
+            "house": "hightower",
+            "gender": "male",
+            "titles": [
+                "Hand of the King",
+                "Lord of the Hightower"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "alicent_hightower",
+            "name": "Alicent Hightower",
+            "house": "hightower",
+            "marriedInto": "targaryen",
+            "gender": "female",
+            "titles": [
+                "Queen Consort"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "gwayne_hightower",
+            "name": "Gwayne Hightower",
+            "house": "hightower",
+            "gender": "male",
+            "titles": [
+                "Ser"
+            ],
+            "status": "alive",
+            "series": "hotd"
+        },
+        {
+            "id": "ormund_hightower",
+            "name": "Ormund Hightower",
+            "house": "hightower",
+            "gender": "male",
+            "titles": [
+                "Lord of Oldtown"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "corlys_velaryon",
+            "name": "Corlys Velaryon",
+            "alias": "The Sea Snake",
+            "house": "velaryon",
+            "gender": "male",
+            "titles": [
+                "Lord of the Tides",
+                "Master of Driftmark"
+            ],
+            "status": "alive",
+            "series": "hotd"
+        },
+        {
+            "id": "rhaenys_velaryon",
+            "name": "Rhaenys Targaryen",
+            "alias": "The Queen Who Never Was",
+            "house": "targaryen",
+            "marriedInto": "velaryon",
+            "gender": "female",
+            "titles": [
+                "Princess"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "laenor_velaryon",
+            "name": "Laenor Velaryon",
+            "house": "velaryon",
+            "gender": "male",
+            "titles": [
+                "Heir of Driftmark"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "laena_velaryon",
+            "name": "Laena Velaryon",
+            "house": "velaryon",
+            "gender": "female",
+            "titles": [
+                "Dragon Rider"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "addam_velaryon",
+            "name": "Addam of Hull",
+            "alias": "Addam Velaryon",
+            "house": "velaryon",
+            "gender": "male",
+            "titles": [
+                "Dragon Rider"
+            ],
+            "status": "alive",
+            "series": "hotd"
+        },
+        {
+            "id": "alyn_velaryon",
+            "name": "Alyn of Hull",
+            "alias": "Alyn Velaryon",
+            "house": "velaryon",
+            "gender": "male",
+            "titles": [
+                "First Mate"
+            ],
+            "status": "alive",
+            "series": "hotd"
+        },
+        {
+            "id": "lyonel_strong",
+            "name": "Lyonel Strong",
+            "house": "strong",
+            "gender": "male",
+            "titles": [
+                "Lord of Harrenhal",
+                "Master of Laws",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "harwin_strong",
+            "name": "Harwin Strong",
+            "alias": "Breakbones",
+            "house": "strong",
+            "gender": "male",
+            "titles": [
+                "Heir to Harrenhal"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "larys_strong",
+            "name": "Larys Strong",
+            "alias": "The Clubfoot",
+            "house": "strong",
+            "gender": "male",
+            "titles": [
+                "Lord of Harrenhal",
+                "Master of Whisperers"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "criston_cole",
+            "name": "Criston Cole",
+            "alias": "The Kingmaker",
+            "house": "cole",
+            "gender": "male",
+            "titles": [
+                "Lord Commander of the Kingsguard",
+                "Hand of the King"
+            ],
+            "status": "deceased",
+            "series": "hotd"
+        },
+        {
+            "id": "lyman_beesbury",
+            "name": "Lyman Beesbury",
+            "house": "beesbury",
+            "gender": "male",
+            "titles": [
+                "Lord of Honeyholt",
+                "Master of Coin"
+            ],
+            "status": "deceased",
+            "deathCause": "Killed at the Green Council",
+            "series": "hotd"
+        },
+        {
+            "id": "bartimos_celtigar",
+            "name": "Bartimos Celtigar",
+            "house": "celtigar",
+            "gender": "male",
+            "titles": [
+                "Lord of Claw Isle",
+                "Master of Coin (Black Council)"
+            ],
+            "status": "alive",
+            "series": "hotd"
+        },
+        {
+            "id": "beric_dondarrion",
+            "name": "Beric Dondarrion",
+            "alias": "The Lightning Lord",
+            "house": "dondarrion",
+            "gender": "male",
+            "titles": [
+                "Lord of Blackhaven"
+            ],
+            "status": "deceased",
+            "deathCause": "Died saving Arya Stark",
+            "series": "got"
+        }
+    ],
+    "relationships": [
+        {
+            "parent": "alester_tyrell",
+            "child": "harlen_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "harlen_tyrell",
+            "child": "luthor_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "person1": "luthor_tyrell",
+            "person2": "olenna_tyrell",
+            "type": "spouse"
+        },
+        {
+            "parent": "luthor_tyrell",
+            "child": "mace_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "olenna_tyrell",
+            "child": "mace_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "person1": "mace_tyrell",
+            "person2": "alerie_hightower",
+            "type": "spouse"
+        },
+        {
+            "parent": "mace_tyrell",
+            "child": "willas_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alerie_hightower",
+            "child": "willas_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "mace_tyrell",
+            "child": "garlan_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alerie_hightower",
+            "child": "garlan_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "person1": "garlan_tyrell",
+            "person2": "leonette_fossoway",
+            "type": "spouse"
+        },
+        {
+            "parent": "mace_tyrell",
+            "child": "loras_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alerie_hightower",
+            "child": "loras_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "mace_tyrell",
+            "child": "margaery_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alerie_hightower",
+            "child": "margaery_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "aerion_targaryen",
+            "child": "aegon_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "aerion_targaryen",
+            "child": "visenya_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "aerion_targaryen",
+            "child": "rhaenys_targaryen_og",
+            "type": "parent-child"
+        },
+        {
+            "parent": "valaena_velaryon",
+            "child": "aegon_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "valaena_velaryon",
+            "child": "visenya_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "valaena_velaryon",
+            "child": "rhaenys_targaryen_og",
+            "type": "parent-child"
+        },
+        {
+            "person1": "aegon_i",
+            "person2": "visenya_targaryen",
+            "type": "spouse"
+        },
+        {
+            "person1": "aegon_i",
+            "person2": "rhaenys_targaryen_og",
+            "type": "spouse"
+        },
+        {
+            "parent": "aegon_i",
+            "child": "aenys_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaenys_targaryen_og",
+            "child": "aenys_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "aegon_i",
+            "child": "maegor_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "visenya_targaryen",
+            "child": "maegor_i",
+            "type": "parent-child"
+        },
+        {
+            "person1": "aenys_i",
+            "person2": "alyssa_velaryon",
+            "type": "spouse"
+        },
+        {
+            "parent": "aenys_i",
+            "child": "jaehaerys_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alyssa_velaryon",
+            "child": "jaehaerys_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "aenys_i",
+            "child": "alysanne_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alyssa_velaryon",
+            "child": "alysanne_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "person1": "jaehaerys_i",
+            "person2": "alysanne_targaryen",
+            "type": "spouse"
+        },
+        {
+            "parent": "jaehaerys_i",
+            "child": "aemon_targaryen_hod",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alysanne_targaryen",
+            "child": "aemon_targaryen_hod",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jaehaerys_i",
+            "child": "baelon_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alysanne_targaryen",
+            "child": "baelon_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jaehaerys_i",
+            "child": "alyssa_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alysanne_targaryen",
+            "child": "alyssa_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "person1": "aemon_targaryen_hod",
+            "person2": "jocelyn_baratheon",
+            "type": "spouse"
+        },
+        {
+            "parent": "aemon_targaryen_hod",
+            "child": "rhaenys_targaryen_hod",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jocelyn_baratheon",
+            "child": "rhaenys_targaryen_hod",
+            "type": "parent-child"
+        },
+        {
+            "person1": "baelon_targaryen",
+            "person2": "alyssa_targaryen",
+            "type": "spouse"
+        },
+        {
+            "parent": "baelon_targaryen",
+            "child": "viserys_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alyssa_targaryen",
+            "child": "viserys_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "baelon_targaryen",
+            "child": "daemon_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alyssa_targaryen",
+            "child": "daemon_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "person1": "rhaenys_targaryen_hod",
+            "person2": "corlys_velaryon",
+            "type": "spouse"
+        },
+        {
+            "parent": "rhaenys_targaryen_hod",
+            "child": "laena_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "corlys_velaryon",
+            "child": "laena_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaenys_targaryen_hod",
+            "child": "laenor_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "corlys_velaryon",
+            "child": "laenor_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "person1": "viserys_i",
+            "person2": "aemma_arryn",
+            "type": "spouse"
+        },
+        {
+            "parent": "viserys_i",
+            "child": "rhaenyra_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "aemma_arryn",
+            "child": "rhaenyra_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "person1": "viserys_i",
+            "person2": "alicent_hightower",
+            "type": "spouse"
+        },
+        {
+            "parent": "viserys_i",
+            "child": "aegon_ii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alicent_hightower",
+            "child": "aegon_ii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "viserys_i",
+            "child": "helaena_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alicent_hightower",
+            "child": "helaena_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "viserys_i",
+            "child": "aemond_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alicent_hightower",
+            "child": "aemond_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "viserys_i",
+            "child": "daeron_targaryen_hod",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alicent_hightower",
+            "child": "daeron_targaryen_hod",
+            "type": "parent-child"
+        },
+        {
+            "person1": "daemon_targaryen",
+            "person2": "laena_velaryon",
+            "type": "spouse"
+        },
+        {
+            "parent": "daemon_targaryen",
+            "child": "baela_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "laena_velaryon",
+            "child": "baela_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "daemon_targaryen",
+            "child": "rhaena_targaryen_daemon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "laena_velaryon",
+            "child": "rhaena_targaryen_daemon",
+            "type": "parent-child"
+        },
+        {
+            "person1": "rhaenyra_targaryen",
+            "person2": "laenor_velaryon",
+            "type": "spouse"
+        },
+        {
+            "parent": "rhaenyra_targaryen",
+            "child": "jacaerys_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaenyra_targaryen",
+            "child": "lucerys_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaenyra_targaryen",
+            "child": "joffrey_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "person1": "rhaenyra_targaryen",
+            "person2": "daemon_targaryen",
+            "type": "spouse"
+        },
+        {
+            "parent": "rhaenyra_targaryen",
+            "child": "aegon_iii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "daemon_targaryen",
+            "child": "aegon_iii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaenyra_targaryen",
+            "child": "viserys_ii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "daemon_targaryen",
+            "child": "viserys_ii",
+            "type": "parent-child"
+        },
+        {
+            "person1": "aegon_ii",
+            "person2": "helaena_targaryen",
+            "type": "spouse"
+        },
+        {
+            "parent": "viserys_ii",
+            "child": "daeron_ii",
+            "type": "parent-child"
+        },
+        {
+            "person1": "daeron_ii",
+            "person2": "myriah_martell",
+            "type": "spouse"
+        },
+        {
+            "parent": "daeron_ii",
+            "child": "maekar_i",
+            "type": "parent-child"
+        },
+        {
+            "parent": "myriah_martell",
+            "child": "maekar_i",
+            "type": "parent-child"
+        },
+        {
+            "person1": "maekar_i",
+            "person2": "dyanna_dayne",
+            "type": "spouse"
+        },
+        {
+            "parent": "maekar_i",
+            "child": "aegon_v",
+            "type": "parent-child"
+        },
+        {
+            "parent": "dyanna_dayne",
+            "child": "aegon_v",
+            "type": "parent-child"
+        },
+        {
+            "parent": "maekar_i",
+            "child": "aemon_maester",
+            "type": "parent-child"
+        },
+        {
+            "parent": "dyanna_dayne",
+            "child": "aemon_maester",
+            "type": "parent-child"
+        },
+        {
+            "person1": "aegon_v",
+            "person2": "betha_blackwood",
+            "type": "spouse"
+        },
+        {
+            "parent": "aegon_v",
+            "child": "jaehaerys_ii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "betha_blackwood",
+            "child": "jaehaerys_ii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "aegon_v",
+            "child": "shaera_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "betha_blackwood",
+            "child": "shaera_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "person1": "jaehaerys_ii",
+            "person2": "shaera_targaryen",
+            "type": "spouse"
+        },
+        {
+            "parent": "jaehaerys_ii",
+            "child": "aerys_ii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "shaera_targaryen",
+            "child": "aerys_ii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jaehaerys_ii",
+            "child": "rhaella_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "shaera_targaryen",
+            "child": "rhaella_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "person1": "aerys_ii",
+            "person2": "rhaella_targaryen",
+            "type": "spouse"
+        },
+        {
+            "parent": "aerys_ii",
+            "child": "rhaegar_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaella_targaryen",
+            "child": "rhaegar_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "aerys_ii",
+            "child": "viserys_iii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaella_targaryen",
+            "child": "viserys_iii",
+            "type": "parent-child"
+        },
+        {
+            "parent": "aerys_ii",
+            "child": "daenerys_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaella_targaryen",
+            "child": "daenerys_targaryen",
+            "type": "parent-child"
+        },
+        {
+            "person1": "rhaegar_targaryen",
+            "person2": "elia_martell",
+            "type": "spouse"
+        },
+        {
+            "parent": "rhaegar_targaryen",
+            "child": "rhaenys_rhaegar",
+            "type": "parent-child"
+        },
+        {
+            "parent": "elia_martell",
+            "child": "rhaenys_rhaegar",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaegar_targaryen",
+            "child": "aegon_rhaegar",
+            "type": "parent-child"
+        },
+        {
+            "parent": "elia_martell",
+            "child": "aegon_rhaegar",
+            "type": "parent-child"
+        },
+        {
+            "person1": "rhaegar_targaryen",
+            "person2": "lyanna_stark",
+            "type": "spouse",
+            "secret": true
+        },
+        {
+            "parent": "rhaegar_targaryen",
+            "child": "jon_snow",
+            "type": "parent-child",
+            "secret": true
+        },
+        {
+            "parent": "lyanna_stark",
+            "child": "jon_snow",
+            "type": "parent-child",
+            "secret": true
+        },
+        {
+            "parent": "cregan_stark",
+            "child": "rickon_stark_cregan",
+            "type": "parent-child"
+        },
+        {
+            "person1": "cregan_stark",
+            "person2": "alysanne_blackwood_stark",
+            "type": "spouse"
+        },
+        {
+            "parent": "alysanne_blackwood_stark",
+            "child": "rickon_stark_cregan",
+            "type": "parent-child"
+        },
+        {
+            "person1": "rickard_stark",
+            "person2": "lyarra_stark",
+            "type": "spouse"
+        },
+        {
+            "parent": "rickard_stark",
+            "child": "brandon_stark_wild",
+            "type": "parent-child"
+        },
+        {
+            "parent": "lyarra_stark",
+            "child": "brandon_stark_wild",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rickard_stark",
+            "child": "eddard_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "lyarra_stark",
+            "child": "eddard_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rickard_stark",
+            "child": "lyanna_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "lyarra_stark",
+            "child": "lyanna_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rickard_stark",
+            "child": "benjen_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "lyarra_stark",
+            "child": "benjen_stark",
+            "type": "parent-child"
+        },
+        {
+            "person1": "eddard_stark",
+            "person2": "catelyn_stark",
+            "type": "spouse"
+        },
+        {
+            "parent": "eddard_stark",
+            "child": "robb_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "catelyn_stark",
+            "child": "robb_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "eddard_stark",
+            "child": "sansa_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "catelyn_stark",
+            "child": "sansa_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "eddard_stark",
+            "child": "arya_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "catelyn_stark",
+            "child": "arya_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "eddard_stark",
+            "child": "bran_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "catelyn_stark",
+            "child": "bran_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "eddard_stark",
+            "child": "rickon_stark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "catelyn_stark",
+            "child": "rickon_stark",
+            "type": "parent-child"
+        },
+        {
+            "person1": "robb_stark",
+            "person2": "talisa_maegyr",
+            "type": "spouse"
+        },
+        {
+            "parent": "hoster_tully",
+            "child": "catelyn_stark",
+            "type": "parent-child"
+        },
+        {
+            "person1": "tytos_lannister",
+            "person2": "jeyne_marbrand",
+            "type": "spouse"
+        },
+        {
+            "parent": "tytos_lannister",
+            "child": "tywin_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jeyne_marbrand",
+            "child": "tywin_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "tytos_lannister",
+            "child": "kevan_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jeyne_marbrand",
+            "child": "kevan_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "tytos_lannister",
+            "child": "genna_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jeyne_marbrand",
+            "child": "genna_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "tytos_lannister",
+            "child": "tygett_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jeyne_marbrand",
+            "child": "tygett_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "tytos_lannister",
+            "child": "gerion_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jeyne_marbrand",
+            "child": "gerion_lannister",
+            "type": "parent-child"
+        },
+        {
+            "person1": "tywin_lannister",
+            "person2": "joanna_lannister",
+            "type": "spouse"
+        },
+        {
+            "parent": "tywin_lannister",
+            "child": "cersei_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "joanna_lannister",
+            "child": "cersei_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "tywin_lannister",
+            "child": "jaime_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "joanna_lannister",
+            "child": "jaime_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "tywin_lannister",
+            "child": "tyrion_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "joanna_lannister",
+            "child": "tyrion_lannister",
+            "type": "parent-child"
+        },
+        {
+            "person1": "kevan_lannister",
+            "person2": "dorna_swyft",
+            "type": "spouse"
+        },
+        {
+            "parent": "kevan_lannister",
+            "child": "lancel_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "dorna_swyft",
+            "child": "lancel_lannister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "tygett_lannister",
+            "child": "tyrek_lannister",
+            "type": "parent-child"
+        },
+        {
+            "person1": "cersei_lannister",
+            "person2": "robert_baratheon",
+            "type": "spouse"
+        },
+        {
+            "parent": "jaime_lannister",
+            "child": "joffrey_baratheon",
+            "type": "parent-child",
+            "secret": true
+        },
+        {
+            "parent": "cersei_lannister",
+            "child": "joffrey_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jaime_lannister",
+            "child": "myrcella_baratheon",
+            "type": "parent-child",
+            "secret": true
+        },
+        {
+            "parent": "cersei_lannister",
+            "child": "myrcella_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jaime_lannister",
+            "child": "tommen_baratheon",
+            "type": "parent-child",
+            "secret": true
+        },
+        {
+            "parent": "cersei_lannister",
+            "child": "tommen_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "person1": "ormund_baratheon",
+            "person2": "rhaelle_targaryen_baratheon",
+            "type": "spouse"
+        },
+        {
+            "parent": "ormund_baratheon",
+            "child": "steffon_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaelle_targaryen_baratheon",
+            "child": "steffon_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "person1": "steffon_baratheon",
+            "person2": "cassana_estermont",
+            "type": "spouse"
+        },
+        {
+            "parent": "steffon_baratheon",
+            "child": "robert_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "cassana_estermont",
+            "child": "robert_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "steffon_baratheon",
+            "child": "stannis_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "cassana_estermont",
+            "child": "stannis_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "steffon_baratheon",
+            "child": "renly_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "cassana_estermont",
+            "child": "renly_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "person1": "stannis_baratheon",
+            "person2": "selyse_florent",
+            "type": "spouse"
+        },
+        {
+            "parent": "stannis_baratheon",
+            "child": "shireen_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "selyse_florent",
+            "child": "shireen_baratheon",
+            "type": "parent-child"
+        },
+        {
+            "person1": "renly_baratheon",
+            "person2": "margaery_tyrell",
+            "type": "spouse"
+        },
+        {
+            "parent": "robert_baratheon",
+            "child": "gendry_baratheon",
+            "type": "parent-child",
+            "bastard": true
+        },
+        {
+            "parent": "robert_baratheon",
+            "child": "edric_storm",
+            "type": "parent-child",
+            "bastard": true
+        },
+        {
+            "parent": "alester_tyrell",
+            "child": "harlen_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "person1": "luthor_tyrell",
+            "person2": "olenna_tyrell",
+            "type": "spouse"
+        },
+        {
+            "parent": "luthor_tyrell",
+            "child": "mace_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "olenna_tyrell",
+            "child": "mace_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "person1": "mace_tyrell",
+            "person2": "alerie_hightower",
+            "type": "spouse"
+        },
+        {
+            "parent": "mace_tyrell",
+            "child": "willas_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alerie_hightower",
+            "child": "willas_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "mace_tyrell",
+            "child": "garlan_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alerie_hightower",
+            "child": "garlan_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "person1": "garlan_tyrell",
+            "person2": "leonette_fossoway",
+            "type": "spouse"
+        },
+        {
+            "parent": "mace_tyrell",
+            "child": "loras_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alerie_hightower",
+            "child": "loras_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "mace_tyrell",
+            "child": "margaery_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alerie_hightower",
+            "child": "margaery_tyrell",
+            "type": "parent-child"
+        },
+        {
+            "person1": "margaery_tyrell",
+            "person2": "joffrey_baratheon",
+            "type": "spouse"
+        },
+        {
+            "person1": "margaery_tyrell",
+            "person2": "tommen_baratheon",
+            "type": "spouse"
+        },
+        {
+            "person1": "nymeria_martell",
+            "person2": "mors_martell",
+            "type": "spouse"
+        },
+        {
+            "parent": "princess_of_dorne",
+            "child": "doran_martell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "princess_of_dorne",
+            "child": "elia_martell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "princess_of_dorne",
+            "child": "oberyn_martell",
+            "type": "parent-child"
+        },
+        {
+            "person1": "doran_martell",
+            "person2": "mellario_norvos",
+            "type": "spouse"
+        },
+        {
+            "parent": "doran_martell",
+            "child": "arianne_martell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "mellario_norvos",
+            "child": "arianne_martell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "doran_martell",
+            "child": "quentyn_martell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "mellario_norvos",
+            "child": "quentyn_martell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "doran_martell",
+            "child": "trystane_martell",
+            "type": "parent-child"
+        },
+        {
+            "parent": "mellario_norvos",
+            "child": "trystane_martell",
+            "type": "parent-child"
+        },
+        {
+            "person1": "trystane_martell",
+            "person2": "myrcella_baratheon",
+            "type": "spouse"
+        },
+        {
+            "person1": "oberyn_martell",
+            "person2": "ellaria_sand",
+            "type": "spouse",
+            "note": "Paramours"
+        },
+        {
+            "parent": "oberyn_martell",
+            "child": "obara_sand",
+            "type": "parent-child",
+            "bastard": true
+        },
+        {
+            "parent": "oberyn_martell",
+            "child": "nymeria_sand",
+            "type": "parent-child",
+            "bastard": true
+        },
+        {
+            "parent": "oberyn_martell",
+            "child": "tyene_sand",
+            "type": "parent-child",
+            "bastard": true
+        },
+        {
+            "parent": "ellaria_sand",
+            "child": "tyene_sand",
+            "type": "parent-child"
+        },
+        {
+            "person1": "jon_arryn",
+            "person2": "jeyne_royce",
+            "type": "spouse"
+        },
+        {
+            "person1": "jon_arryn",
+            "person2": "rowena_arryn",
+            "type": "spouse"
+        },
+        {
+            "person1": "jon_arryn",
+            "person2": "lysa_arryn",
+            "type": "spouse"
+        },
+        {
+            "parent": "jon_arryn",
+            "child": "robert_arryn",
+            "type": "parent-child"
+        },
+        {
+            "parent": "lysa_arryn",
+            "child": "robert_arryn",
+            "type": "parent-child"
+        },
+        {
+            "parent": "hoster_tully",
+            "child": "lysa_arryn",
+            "type": "parent-child"
+        },
+        {
+            "parent": "minisa_whent",
+            "child": "lysa_arryn",
+            "type": "parent-child"
+        },
+        {
+            "person1": "hoster_tully",
+            "person2": "minisa_whent",
+            "type": "spouse"
+        },
+        {
+            "parent": "hoster_tully",
+            "child": "edmure_tully",
+            "type": "parent-child"
+        },
+        {
+            "parent": "minisa_whent",
+            "child": "edmure_tully",
+            "type": "parent-child"
+        },
+        {
+            "parent": "minisa_whent",
+            "child": "catelyn_stark",
+            "type": "parent-child"
+        },
+        {
+            "person1": "edmure_tully",
+            "person2": "roslin_frey",
+            "type": "spouse"
+        },
+        {
+            "parent": "benedict_justman",
+            "child": "edmyn_tully",
+            "type": "parent-child",
+            "note": "Lineage connection for structure"
+        },
+        {
+            "parent": "quellon_greyjoy",
+            "child": "balon_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "quellon_greyjoy",
+            "child": "euron_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "quellon_greyjoy",
+            "child": "victarion_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "quellon_greyjoy",
+            "child": "aeron_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "person1": "balon_greyjoy",
+            "person2": "alannys_harlaw",
+            "type": "spouse"
+        },
+        {
+            "parent": "balon_greyjoy",
+            "child": "rodrik_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alannys_harlaw",
+            "child": "rodrik_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "balon_greyjoy",
+            "child": "maron_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alannys_harlaw",
+            "child": "maron_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "balon_greyjoy",
+            "child": "asha_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alannys_harlaw",
+            "child": "asha_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "balon_greyjoy",
+            "child": "theon_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "alannys_harlaw",
+            "child": "theon_greyjoy",
+            "type": "parent-child"
+        },
+        {
+            "parent": "maege_mormont",
+            "child": "dacey_mormont",
+            "type": "parent-child"
+        },
+        {
+            "parent": "maege_mormont",
+            "child": "alysane_mormont",
+            "type": "parent-child"
+        },
+        {
+            "parent": "maege_mormont",
+            "child": "lyanna_mormont",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jeor_mormont",
+            "child": "jorah_mormont",
+            "type": "parent-child"
+        },
+        {
+            "person1": "jorah_mormont",
+            "person2": "lynesse_hightower",
+            "type": "spouse"
+        },
+        {
+            "person1": "howland_reed",
+            "person2": "jyana_reed",
+            "type": "spouse"
+        },
+        {
+            "parent": "howland_reed",
+            "child": "meera_reed",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jyana_reed",
+            "child": "meera_reed",
+            "type": "parent-child"
+        },
+        {
+            "parent": "howland_reed",
+            "child": "jojen_reed",
+            "type": "parent-child"
+        },
+        {
+            "parent": "jyana_reed",
+            "child": "jojen_reed",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rickard_karstark",
+            "child": "harrion_karstark",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rickard_karstark",
+            "child": "alys_karstark",
+            "type": "parent-child"
+        },
+        {
+            "person1": "alys_karstark",
+            "person2": "sigorn_thenn",
+            "type": "spouse"
+        },
+        {
+            "parent": "greatjon_umber",
+            "child": "smalljon_umber",
+            "type": "parent-child"
+        },
+        {
+            "parent": "smalljon_umber",
+            "child": "ned_umber",
+            "type": "parent-child",
+            "note": "Nephew/Son relation simplified"
+        },
+        {
+            "parent": "cley_cerwyn",
+            "child": "jonelle_cerwyn",
+            "type": "parent-child"
+        },
+        {
+            "parent": "galbart_glover",
+            "child": "robett_glover",
+            "type": "parent-child"
+        },
+        {
+            "parent": "lord_locke",
+            "child": "unnamed_locke_son",
+            "type": "parent-child"
+        },
+        {
+            "person1": "willam_dustin",
+            "person2": "barbrey_dustin",
+            "type": "spouse"
+        },
+        {
+            "parent": "rodrik_ryswell",
+            "child": "barbrey_dustin",
+            "type": "parent-child"
+        },
+        {
+            "parent": "yohn_royce",
+            "child": "andar_royce",
+            "type": "parent-child"
+        },
+        {
+            "parent": "yohn_royce",
+            "child": "robar_royce",
+            "type": "parent-child"
+        },
+        {
+            "parent": "yohn_royce",
+            "child": "waymar_royce",
+            "type": "parent-child"
+        },
+        {
+            "parent": "theomore_manderly",
+            "child": "wyman_manderly",
+            "type": "parent-child"
+        },
+        {
+            "parent": "wyman_manderly",
+            "child": "wylis_manderly",
+            "type": "parent-child"
+        },
+        {
+            "parent": "wyman_manderly",
+            "child": "wendel_manderly",
+            "type": "parent-child"
+        },
+        {
+            "parent": "wylis_manderly",
+            "child": "wynafryd_manderly",
+            "type": "parent-child"
+        },
+        {
+            "parent": "wylis_manderly",
+            "child": "wylla_manderly",
+            "type": "parent-child"
+        },
+        {
+            "person1": "roose_bolton",
+            "person2": "walda_bolton",
+            "type": "spouse"
+        },
+        {
+            "parent": "roose_bolton",
+            "child": "ramsay_bolton",
+            "type": "parent-child"
+        },
+        {
+            "person1": "ramsay_bolton",
+            "person2": "sansa_stark",
+            "type": "spouse"
+        },
+        {
+            "parent": "jason_mallister",
+            "child": "patrek_mallister",
+            "type": "parent-child"
+        },
+        {
+            "parent": "eldon_estermont",
+            "child": "aemon_estermont",
+            "type": "parent-child"
+        },
+        {
+            "parent": "eldon_estermont",
+            "child": "arianne_estermont",
+            "type": "parent-child"
+        },
+        {
+            "parent": "eldon_estermont",
+            "child": "andrew_estermont",
+            "type": "parent-child"
+        },
+        {
+            "parent": "selwyn_tarth",
+            "child": "brienne_tarth",
+            "type": "parent-child"
+        },
+        {
+            "parent": "gawen_westerling",
+            "child": "jeyne_westerling",
+            "type": "parent-child"
+        },
+        {
+            "parent": "gawen_westerling",
+            "child": "rollam_westerling",
+            "type": "parent-child"
+        },
+        {
+            "parent": "gawen_westerling",
+            "child": "elenya_westerling",
+            "type": "parent-child"
+        },
+        {
+            "person1": "jeyne_westerling",
+            "person2": "robb_stark",
+            "type": "spouse"
+        },
+        {
+            "parent": "alester_florent",
+            "child": "axell_florent",
+            "type": "parent-child"
+        },
+        {
+            "parent": "anders_yronwood",
+            "child": "cletus_yronwood",
+            "type": "parent-child"
+        },
+        {
+            "parent": "otto_hightower",
+            "child": "alicent_hightower",
+            "type": "parent-child"
+        },
+        {
+            "parent": "otto_hightower",
+            "child": "gwayne_hightower",
+            "type": "parent-child"
+        },
+        {
+            "person1": "alicent_hightower",
+            "person2": "viserys_i_targaryen",
+            "type": "spouse"
+        },
+        {
+            "person1": "corlys_velaryon",
+            "person2": "rhaenys_velaryon",
+            "type": "spouse"
+        },
+        {
+            "parent": "corlys_velaryon",
+            "child": "laenor_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaenys_velaryon",
+            "child": "laenor_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "corlys_velaryon",
+            "child": "laena_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "rhaenys_velaryon",
+            "child": "laena_velaryon",
+            "type": "parent-child"
+        },
+        {
+            "parent": "corlys_velaryon",
+            "child": "addam_velaryon",
+            "type": "parent-child",
+            "bastard": true,
+            "note": "Legitimized bastard"
+        },
+        {
+            "parent": "corlys_velaryon",
+            "child": "alyn_velaryon",
+            "type": "parent-child",
+            "bastard": true,
+            "note": "Legitimized bastard"
+        },
+        {
+            "parent": "lyonel_strong",
+            "child": "harwin_strong",
+            "type": "parent-child"
+        },
+        {
+            "parent": "lyonel_strong",
+            "child": "larys_strong",
+            "type": "parent-child"
+        }
+    ]
+}
